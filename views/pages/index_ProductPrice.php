@@ -1,1 +1,0 @@
-new ProductPrice<a href=? controller=ProductPrice&action=newProductPrice> click </a><br>
