@@ -1,10 +1,10 @@
 <?php 
 class Details{
-    public $id;
-    public $name;
+    public $QID;
+    public $Pd_id;
     public function __construct ($id,$name) {
-        $this->id = $id;
-        $this->name = $name;
+        $this->QID = $id;
+        $this->Pd_id = $name;
     }
     public static function getAll()
     {
