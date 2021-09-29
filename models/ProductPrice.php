@@ -53,7 +53,7 @@
         require("connection_connect.php");
         $sql = "SELECT * FROM product_price, where PDid IN(PDid like '%$key%' or minQty like '%key%' or Qty like '%key%'
         or price like '%key%')";
-        $result = conn->query($sql);
+        $result = $conn->query($sql);
         while($my_row = $result->fetch_assoc()){
             $PDid = $my_row[PDid];
             $minQty = $my_row[minQty];
@@ -72,7 +72,7 @@
         require("connection_connect.php");
         $sql = "INSERT INTO product_price(PDid, minQty, Qty, price, screenPC) VALUES 
         ('PDid', 'minQty', 'Qty', 'price', 'screenPC')";
-        $result = conn->query($sql);
+        $result = $conn->query($sql);
         require("connection_close.php");
 
         return "add success $result rows";
@@ -81,7 +81,7 @@
     public static function update($PDid, $minQty, $Qty, $price, $screenPC) {
         require("connection_connect.php");
         $sql = "UPDATE product_price SET minQty='$minQty', Qty='$Qty', price='$price', screenPC='$screenPC' WHERE PDid='$PDid'";
-        $result = conn->query($sql);
+        $result = $onn->query($sql);
         require("connection_close.php");
 
         return "update success $result row";
@@ -90,7 +90,7 @@
     public static function delete($PDid, $minQty) {
         require_once("connection_connect.php");
         $sql = "DELETE FROM product_price WHERE PDid='$PDid' AND minQty='$minQty'";
-        $result = conn->query($sql);
+        $result = $conn->query($sql);
         require("connection_close.php");
 
         return "delete success $result rows";
