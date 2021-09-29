@@ -1,5 +1,6 @@
 <?php 
 $controllers = array('pages'=>['home','error']);
+
 function call($controller,$action){
     require_once("controllers/".$controller."_controller.php");
     switch($controller)
@@ -21,6 +22,6 @@ if(array_key_exists($controller,$controllers))
     }
 }
 else{
-    call('pages','erroe');
+    call('pages','error');
 }
 ?>
