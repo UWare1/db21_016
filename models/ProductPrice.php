@@ -51,7 +51,7 @@
 
     public static function search($key) {
         require("connection_connect.php");
-        $sql = "select * from product_price, where (PDid like '%$key%' or minQty like '%key%' or Qty like '%key%'
+        $sql = "SELECT * FROM product_price, where PDid IN(PDid like '%$key%' or minQty like '%key%' or Qty like '%key%'
         or price like '%key%')";
         $result = conn->query($sql);
         while($my_row = $result->fetch_assoc()){
@@ -68,9 +68,9 @@
         return $productList;
     }
 
-    public static function add($PDid, $minQty, $Qty, $price, $screenPC) {
+    public static function Add($PDid, $minQty, $Qty, $price, $screenPC) {
         require("connection_connect.php");
-        $sql = "insert into product_price(PDid, minQty, Qty, price, screenPC) values 
+        $sql = "INSERT INTO product_price(PDid, minQty, Qty, price, screenPC) VALUES 
         ('PDid', 'minQty', 'Qty', 'price', 'screenPC')";
         $result = conn->query($sql);
         require("connection_close.php");
@@ -89,7 +89,7 @@
 
     public static function delete($PDid, $minQty) {
         require_once("connection_connect.php");
-        $sql = "DELETE from product_price WHERE PDid='$PDid' AND minQty='$minQty'";
+        $sql = "DELETE FROM product_price WHERE PDid='$PDid' AND minQty='$minQty'";
         $result = conn->query($sql);
         require("connection_close.php");
 
