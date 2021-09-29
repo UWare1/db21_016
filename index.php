@@ -8,6 +8,7 @@ else{
     $controller = 'pages';
     $action = 'home';
 }
+
 ?>
 
 <html>
