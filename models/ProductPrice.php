@@ -14,7 +14,7 @@
         $this->screenPC = $screenPC;
     }
 
-/*    public static function get($PDid) {
+    public static function get($PDid) {
         require("connection_connect.php");
         $sql = "select * from product_price";
         $result = $conn->query($sql);
@@ -27,7 +27,7 @@
         require("connection_close.php");
 
         return new ProductPrice($PDid,$minQty,$Qty,$price,$screenPC);
-    }*/
+    }
 
     public static function getAll()
     {
@@ -50,6 +50,6 @@
         return $productList;
     }
 
-    public
+    
     }
 ?>
