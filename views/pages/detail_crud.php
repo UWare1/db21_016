@@ -8,7 +8,7 @@
                 <td>$detail->Pd_c</td>
                 <td>$detail->qty</td>
                 <td>$detail->numc</td>
-                <td> update </td> <td> delete </td></tr>";
+                </tr>";
     }
     echo "</table>";
     ?>
