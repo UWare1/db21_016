@@ -1,11 +1,14 @@
 <?php 
-$controllers = array('pages'=>['home','error']);
+$controllers = array('pages'=>['home','error'],'detail'=>['index']);
 
 function call($controller,$action){
     require_once("controllers/".$controller."_controller.php");
     switch($controller)
     {
         case"pages": $controller = new PagesController();
+        break;
+        case"detail": require_once("models/detailModel.php");
+                        $controller = new detailController();
         break;
     }
     $controller->{$action}();
