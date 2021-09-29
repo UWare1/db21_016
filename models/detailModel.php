@@ -15,7 +15,7 @@ class Details{
     }
     public static function getAll()
     {
-        $departmentList = [];
+        $detailtList = [];
         require("connection_connect.php");
         $sql = "select * from quotation_detail";
         $result = $conn -> query($sql);
@@ -26,7 +26,7 @@ class Details{
             $Pd_c=$my_row[PDcolor];
             $qty =$my_row[QDqty];
             $numc=$my_row[numColor];
-            $departmentList[] = new Details($QID,$Pd_id,$Pd_c,$qty,$numc);
+            $detailmentList[] = new Details($QID,$Pd_id,$Pd_c,$qty,$numc);
         }
         require("connection_close.php");
         return $detailList;
