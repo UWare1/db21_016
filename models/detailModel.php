@@ -6,12 +6,12 @@ class Details{
     public $qty;
     public $numc;
 
-    public function __construct ($qid,$pid,$c,$q,$nc) {
-        $this->QID = $qid;
-        $this->Pd_id = $pid;
-        $this->Pd_c = $c;
-        $this->qty = $q;
-        $this->numc = $nc;
+    public function __construct ($QID,$Pd_id,$Pd_c,$qty,$numc) {
+        $this->QID = $QID;
+        $this->Pd_id = $Pd_id;
+        $this->Pd_c = $Pd_c;
+        $this->qty = $qty;
+        $this->numc = $numc;
     }
     public static function getAll()
     {
