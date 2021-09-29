@@ -36,7 +36,6 @@
         $sql = "select * from product_price";
         $result = $conn->query($sql);
         while($my_row = $result->fetch_assoc()){
-            $my_row = $result->fetch_assoc();
             $PDid = $my_row[PDid];
             $minQty = $my_row[minQty];
             $Qty = $my_row[Qty];
