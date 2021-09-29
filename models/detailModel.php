@@ -19,7 +19,7 @@ class Details{
         require("connection_connect.php");
         $sql = "select * from quotation_detail";
         $result = $conn -> query($sql);
-        while($my_row == $result->fetch_assoc())
+        while($my_row = $result->fetch_assoc())
         {
             $QID=$my_row[Qid];
             $Pd_id =$my_row[PDid];
