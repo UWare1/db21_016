@@ -7,7 +7,7 @@
         public $screenPC;
 
     public function __construct ($PDid,$minQty,$Qty,$price,$screenPC) {
-        $this->id = $PDid;
+        $this->PDid = $PDid;
         $this->minQty = $minQty;
         $this->Qty = $Qty;
         $this->price = $price;
