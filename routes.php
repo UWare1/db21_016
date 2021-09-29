@@ -1,5 +1,5 @@
 <?php 
-$controllers = array('pages'=>['home','error'],'detail'=>['index'], 'ProductPrice'=>['index']);
+$controllers = array('pages'=>['home','error'],'detail'=>['index'], 'ProductPrice'=>['index','newProductPrice']);
 
 function call($controller,$action){
     require_once("controllers/".$controller."_controller.php");
@@ -8,6 +8,7 @@ function call($controller,$action){
         case"pages": $controller = new PagesController();
         break;
         case"ProductPrice": require_once("models/ProductPrice.php");
+                            require_once("models/ProductPrice.php");
                             $controller = new ProductController();
                             break;
         case"detail": require_once("models/detailModel.php");
