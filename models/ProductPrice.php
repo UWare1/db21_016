@@ -49,7 +49,7 @@
         return $productList;
     }
 
-    public static function search($key) {
+/*    public static function search($key) {
         require("connection_connect.php");
         $sql = "select * from product_price, where (PDid like '%$key%' or minQty like '%key%' or Qty like '%key%'
         or price like '%key%')";
@@ -94,6 +94,6 @@
         require("connection_close.php");
 
         return "delete success $result rows";
-    }
+    }*/
     }
 ?>
