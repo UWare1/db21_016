@@ -6,13 +6,14 @@
 <td>screenPC</td>
 <td>update</td>
 <td>delete</td> </tr>
-<?php foreach($product_list as $ProductPrice) {
+<?php foreach($productList as $ProductPrice) {
     echo "<tr><td>$ProductPrice->PDid</td>
     <td>$ProductPrice->minQty</td>
     <td>$ProductPrice->Qty</td>
     <td>$ProductPrice->price</td>
     <td>$ProductPrice->screenPC</td>
-    <td>update</td><td>delete</td> </tr>";
+    <td>update</td>
+    <td>delete</td> </tr>";
 }
 echo "</table>";
 ?>
