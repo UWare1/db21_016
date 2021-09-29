@@ -26,7 +26,7 @@ class Details{
             $Pd_c = $my_row[PDcolor];
             $qty = $my_row[QDqty];
             $numc= $my_row[numColor];
-            $detailtList[] = new Details($QID,$Pd_id,$Pd_c,$qty,$numc);
+            $detailList[] = new Details($QID,$Pd_id,$Pd_c,$qty,$numc);
         }
         require("connection_close.php");
         return $detailList;
