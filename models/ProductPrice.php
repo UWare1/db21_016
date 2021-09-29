@@ -28,5 +28,26 @@
 
         return new ProductPrice($PDid,$minQty,$Qty,$price,$screenPC);
     }
+
+    public static function getAll()
+    {
+        $productList= [];
+        require("connection_connect.php");
+        $sql = "select * from ProductPrice, department where PDid = '$PDid'";
+        $result = $conn->query($sql);
+        while($my_row = $result->fetch_assoc()){
+            $my_row = $result->fetch_assoc();
+            $PDid = $my_row[PDid];
+            $minQty = $my_row[minQty];
+            $Qty = $my_row[Qty];
+            $price = $my_row[price];
+            $screenPC = $my_row[screenPC];
+            $productList[]= new ProductPrice($PDid, $minQty, $Qty, $price, $screenPC);
+        }
+        
+        require("connection_close.php");
+
+        return $productList;
+    }
     }
 ?>
