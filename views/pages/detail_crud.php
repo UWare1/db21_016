@@ -5,10 +5,10 @@
         foreach($detailList as $detail){
         echo "<tr><td> $detail->QID</td>
                 <td>$detail->Pd_id</td>
-                <td>$detail->Pd_color</td>
+                <td>$detail->Pd_c</td>
                 <td>$detail->qty</td>
-                <td>$detail->num_c</td>
-                <td> update </td> <td> delete </td>";
+                <td>$detail->numc</td>
+                <td> update </td> <td> delete </td></tr>";
     }
     echo "</table>";
     ?>
