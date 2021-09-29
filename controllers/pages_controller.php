@@ -16,7 +16,7 @@ class PagesController
 
     public function productPrice_crud()
     {
-        $ProductPrice_list= ProductPrice::getAll();
+        $productList = ProductPrice::getAll();
         require_once('views/pages/productPrice_crud.php');
     }
 }
