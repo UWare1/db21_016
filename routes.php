@@ -1,6 +1,6 @@
 <?php 
 $controllers = array('pages'=>['home','error'],'detail'=>['index'], 
-                    'ProductPrice'=>['index','newProductPrice','addProductPrice','search']);
+                    'ProductPrice'=>['index','newProductPrice','addProductPrice','search','updateForm','update']);
 
 function call($controller,$action){
     require_once("controllers/".$controller."_controller.php");
