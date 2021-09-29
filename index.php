@@ -17,7 +17,6 @@ else{
         <?php echo "controller = ".$controller.",action = ".$action;?>
         <br>[<a href="?controller=pages&action=home"> Home </a>]<br>
         <br>[<a href="?controller=ProductPrice&action=index"> ProductPrice </a>]
-            new ProductPrice<a href=?controller=ProductPrice&action=newProductPrice> click </a><br>
         <br>[<a href="?controller=detail&action=index"> Detail </a>]<br>
         <?php require_once("routes.php");?>
 </body>
