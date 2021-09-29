@@ -51,8 +51,8 @@
 
     public static function search($key) {
         require("connection_connect.php");
-        $sql = "SELECT * FROM product_price, where PDid IN(PDid like '%$key%' or minQty like '%key%' or Qty like '%key%'
-        or price like '%key%')";
+        $sql = "SELECT * FROM product_price WHERE PDid LIKE '%$key%' OR minQty LIKE '%key%' 
+        OR Qty LIKE '%key%' OR price LIKE '%key%')";
         $result = $conn->query($sql);
         while($my_row = $result->fetch_assoc()){
             $PDid = $my_row[PDid];
