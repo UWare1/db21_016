@@ -19,7 +19,7 @@ else{
 <<<<<<< HEAD
         <br>[<a href="?controller=ProductPrice&action=index"> ProductPrice </a>]<br>
 =======
-        <br>[<a href="?controller=pages&action=detail"> Detail </a>]<br>
+        <br>[<a href="?controller=detail&action=index"> Detail </a>]<br>
 >>>>>>> 573f53dd63f4bffdb8d48e72f426336c07cf7636
         <?php require_once("routes.php");?>
 </body>
