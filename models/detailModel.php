@@ -15,7 +15,7 @@ class Details{
     }
     public static function getAll()
     {
-        $detailtList = [];
+        $detailList = [];
         require("connection_connect.php");
         $sql = "select * from quotation_detail";
         $result = $conn -> query($sql);
