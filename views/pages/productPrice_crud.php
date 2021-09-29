@@ -1,4 +1,4 @@
-<table border=1>
+<table border=2>
 <tr> <td>PDid</td>
 <td>minQty</td>
 <td>Qty</td>
