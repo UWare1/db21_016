@@ -21,5 +21,11 @@ class ProductController {
 
         ProductController::index();
     }
+
+    public function search() {
+        $key=$_GET['key'];
+        $productList=ProductPrice::search($key);
+        require_once('views/pages/newproductPrice.php');
+    }
 }
 ?>
