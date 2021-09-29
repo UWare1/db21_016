@@ -29,7 +29,7 @@ class Details{
             $departmentList[] = new Details($QID,$Pd_id,$Pd_c,$qty,$numc);
         }
         require("connection_close.php");
-        return $departmentList;
+        return $detailList;
     }
 }
 ?>
