@@ -8,18 +8,18 @@ class Details{
     }
     public static function getAll()
     {
-        $departmentList = [];
+        $detailList = [];
         require("connection_connect.php");
         $sql = "select * from quotation_detail";
         $result = $conn -> query($sql);
         while($my_row == $result->fetch_assoc())
         {
-            $depID=$my_row[Qid];
-            $depName =$my_row[PDid];
-            $departmentList[] = new Details($depID,$depName);
+            $QID=$my_row[Qid];
+            $Pd_id=$my_row[PDid];
+            $detailList[] = new Details($QID,$Pd_id);
         }
         require("connection_close.php");
-        return $departmentList;
+        return $detailList;
     }
 }
 ?>
