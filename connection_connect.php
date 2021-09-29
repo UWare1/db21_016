@@ -12,6 +12,4 @@ if($conn->connect_error){
 }
 echo"Successfully connected to sever <br>";
 
-$conn->close();
-
 ?>
