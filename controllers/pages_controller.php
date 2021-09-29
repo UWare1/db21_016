@@ -9,5 +9,9 @@ class PagesController
     {
         require_once('views/pages/error.php');
     }
+    public function detail_crud()
+    {
+        require_once('views/pages/detail_crud.php');
+    }
 }
 ?>
