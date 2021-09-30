@@ -89,7 +89,7 @@
     }
 
     public static function delete($PDid, $minQty) {
-        require_once("connection_connect.php");
+        require("connection_connect.php");
         $sql = "DELETE FROM product_price WHERE PDid='$PDid' AND minQty='$minQty'";
         $result = $conn->query($sql);
         require("connection_close.php");
