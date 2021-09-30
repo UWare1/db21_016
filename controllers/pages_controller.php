@@ -11,7 +11,7 @@ class PagesController
     }
     public function detail_crud()
     {
-        require_once('views/pages/detail_crud.php');
+        require_once('views/details/detail_crud.php');
     }
 
     public function productPrice_crud()
