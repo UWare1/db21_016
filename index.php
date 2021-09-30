@@ -25,7 +25,7 @@ else{
                 Search</button>
             </form>
             <td>
-                <a href="?controlle=ProductPrice & action=updateForm & PDid=$ProductPrice->$PDid"> update </a>
+                <a href="?controller=ProductPrice & action=updateForm & PDid=$ProductPrice->$PDid"> update </a>
             </td>
         <br>[<a href="?controller=detail&action=index"> Detail </a>]<br>
         <?php require_once("routes.php");?>
