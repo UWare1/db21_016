@@ -44,5 +44,19 @@ class ProductController {
         ProductPrice::update($PDid, $minQty, $Qty, $price, $screenPC);
         ProductController::index();
     }
+
+    public function deleteComfirm() {
+        $PDid=$_GET['PDid'];
+        $productPrice=ProductPrice::get($PDid);
+        require_once('views/productprice/deleteConfirm.php');
+    }
+
+    public function delete() {
+        $PDid=$_GET['PDid'];
+        $minQty=$_GET['minQty'];
+        ProductPrice::delete($PDid,$minQty);
+        ProductController::index();
+
+    }
 }
 ?>
