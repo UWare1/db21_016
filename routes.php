@@ -9,7 +9,7 @@ function call($controller,$action){
         case"pages": $controller = new PagesController();
         break;
         case"ProductPrice": require_once("models/ProductPrice.php");
-                            require_once("models/ProductPrice.php");
+                            //require_once("models/ProductPrice.php");
                             $controller = new ProductController();
                             break;
         case"detail": require_once("models/detailModel.php");
