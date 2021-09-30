@@ -30,7 +30,7 @@ class ProductController {
 
     public function updateForm() {
         $PDid = $_GET['PDid'];
-        $productPrice= ProductPrice::get($PDid);
+        $ProductPrice= ProductPrice::get($PDid);
         $productList=ProductPrice::getAll();
         require_once('views/productprice/updateFormPP.php');
     }
@@ -47,7 +47,7 @@ class ProductController {
 
     public function deleteComfirm() {
         $PDid=$_GET['PDid'];
-        $productPrice=ProductPrice::get($PDid);
+        $ProductPrice=ProductPrice::get($PDid);
         require_once('views/productprice/deleteConfirm.php');
     }
 
