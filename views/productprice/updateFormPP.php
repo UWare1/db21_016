@@ -4,7 +4,7 @@
         <?php foreach($productList as $ProPrice)
             {echo "<option value= $ProPrice->PDid>";
                 if($ProPrice->PDid==$ProductPrice->PDid) {echo "selected='selected'";}
-                echo ">$ProductPrice->name</option>";
+                echo ">$ProPrice->name</option>";
             }?>
     </select></label><br>
     <label>จำนวนขั้นต่ำ<input type="text" name="minQty"
