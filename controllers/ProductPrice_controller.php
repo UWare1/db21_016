@@ -30,7 +30,7 @@ class ProductController {
 
     public function updateForm() {
         $PDid = $_GET['PDid'];
-        $ProductPrice= ProductPrice::get($PDid);
+        $productPrice= ProductPrice::get($PDid);
         $productList=ProductPrice::getAll();
         require_once('views/productprice/updateFormPP.php');
     }
