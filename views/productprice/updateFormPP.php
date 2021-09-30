@@ -3,7 +3,7 @@
         <option value=""> choose </option>
         <?php foreach($productList as $ProductPrice)
             {echo "<option value= $ProductPrice->PDid>";
-                if($ProductPrice->PDid!=$ProductPrice->PDid) {echo "selected='selected'";}
+                if($ProductPrice->PDid==$ProductPrice->PDid) {echo "selected='selected'";}
                 echo ">$ProductPrice->PDid</option>";
             }?>
     </select></label><br>
