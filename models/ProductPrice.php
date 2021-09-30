@@ -50,8 +50,10 @@
     }
 
     public static function search($key) {
+        $productList= [];
         require("connection_connect.php");
-        $sql = "SELECT * FROM product_price WHERE PDid LIKE '%$key%')";
+        $sql = "SELECT * FROM product_price WHERE (PDid LIKE '%$key%' OR minQty LIKE '%$key%' OR 
+        Qty LIKE '%$key%' OR price LIKE '%$key%' OR screenPC LIKE '%$key%')";
         $result = $conn->query($sql);
         while($my_row = $result->fetch_assoc()){
             $PDid = $my_row[PDid];
