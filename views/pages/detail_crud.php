@@ -1,6 +1,6 @@
 <table border= 2>
     <tr><td> Qid </td> <td> Product ID </td> <td> Product Color </td> <td> QDqty </td>
-    <td> numColor </td><td> update </td><td> Delete </td><td> numColor </td></tr>
+    <td> numColor </td><td> update </td><td> Delete </td></tr>
     <?php 
         foreach($detailList as $detail){
         echo "<tr><td> $detail->QID</td>
