@@ -16,7 +16,7 @@
 
     public static function get($PDid) {
         require("connection_connect.php");
-        $sql = "select * from product_price";
+        $sql = "SELECT * FROM product_price WHERE PDid = '$PDid'";
         $result = $conn->query($sql);
         $my_row = $result->fetch_assoc();
         $PDid = $my_row[PDid];
@@ -33,7 +33,7 @@
     {
         $productList= [];
         require("connection_connect.php");
-        $sql = "select * from product_price";
+        $sql = "SELECT * FROM product_price";
         $result = $conn->query($sql);
         while($my_row = $result->fetch_assoc()){
             $PDid = $my_row[PDid];
