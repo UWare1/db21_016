@@ -16,7 +16,7 @@
 
     public static function get($PDid) {
         require("connection_connect.php");
-        $sql = "SELECT * FROM product_price WHERE PDid = '$PDid'";
+        $sql = "SELECT * FROM product_price";
         $result = $conn->query($sql);
         $my_row = $result->fetch_assoc();
         $PDid = $my_row[PDid];
@@ -26,7 +26,7 @@
         $screenPC = $my_row[screenPC];
         require("connection_close.php");
 
-        return new ProductPrice($PDid,$minQty,$Qty,$price,$screenPC);
+        return new productPrice($PDid,$minQty,$Qty,$price,$screenPC);
     }
 
     public static function getAll()
