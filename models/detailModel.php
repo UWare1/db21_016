@@ -15,7 +15,7 @@ class Details{
         $this->Pd_c = $Pd_c;
         $this->qty = $qty;
         $this->numc = $numc;
-        $this->Pd_d = $Pd_d
+        $this->Pd_d = $Pd_d;
     }
     public static function getAll()
     {
