@@ -27,10 +27,10 @@ else{
             
             <tr>
             <td>
-                <a href="?controller=ProductPrice&action=updateForm&PDid=$ProductPrice->PDid"> update </a>
+                <a href="?controller=ProductPrice&action=updateForm&$PDid=$ProductPrice->PDid"> update </a>
             </td>
             <td>
-                <a href="?controller=ProductPrice&action=deleteConfirm&PDid=$ProductPrice->PDid"> delete </a>
+                <a href="?controller=ProductPrice&action=deleteConfirm&$PDid=$ProductPrice->PDid"> delete </a>
             </td></tr>
         <br>
         <br>[<a href="?controller=detail&action=index"> Detail </a>]<br>
