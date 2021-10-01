@@ -1,5 +1,5 @@
 <?php 
-$controllers = array('pages'=>['home','error'],'detail'=>['index'], 
+$controllers = array('pages'=>['home','error'],'detail'=>['index','search'], 
                     'ProductPrice'=>['index','newProductPrice','addProductPrice','search','updateForm','update','deleteConfirm','delete']);
 
 function call($controller,$action){
