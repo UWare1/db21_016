@@ -59,7 +59,7 @@
         $productList= [];
         require("connection_connect.php");
         $sql = "SELECT PDid,PDname,pp.minQty,pp.Qty,pp.price,pp.screenPC FROM Product 
-        NATURAL JOIN product_price AS pp WHERE (PDid LIKE '%$key%' OR minQty LIKE '%$key%' OR 
+        NATURAL JOIN product_price AS pp WHERE (PDid LIKE '%$key%' OR LIKE '%key%' OR minQty LIKE '%$key%' OR 
         Qty LIKE '%$key%' OR price LIKE '%$key%' OR screenPC LIKE '%$key%')";
         $result = $conn->query($sql);
         while($my_row = $result->fetch_assoc()){
