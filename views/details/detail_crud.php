@@ -11,7 +11,7 @@ Hi all
                 <td>$detail->Pd_c</td>
                 <td>$detail->qty</td>
                 <td>$detail->numc</td>
-                <td>Update</td>
+                <td><a href = ?controller=detail&action=index> UP </td>
                 <td>Delete</td>
                 </tr>";
     }
