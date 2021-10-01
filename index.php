@@ -31,7 +31,9 @@ else{
             <td>
                 <a href="?controller=ProductPrice&action=deleteConfirm&PDid=$ProductPrice->PDid"> delete </a>
             </td></tr>
-        <br>[<a href="?controller=detail&action=index"> Detail </a>]<br>
+        <br>[<a href="?controller=detail&action=index"> Detail </a>]
+        <br>[<a href="?controller=detail&action=search"> Search Detail </a>]
+
         <?php require_once("routes.php");?>
 </body>
 </html>
