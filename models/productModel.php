@@ -1,5 +1,5 @@
 <?php
-class Product{
+class Products{
     public $pdid;
     public $pdname;
     public $pdtype;
@@ -24,7 +24,7 @@ class Product{
             $pdname = $my_row[PDname];
             $pdtype = $my_row[PDtype];
             $pddes = $my_row[PDdes];
-            $productList[] = new Product($pdid,$pdname,$pdtype,$pddes);
+            $productList[] = new Products($pdid,$pdname,$pdtype,$pddes);
         }
         require("connection_close.php");
         return $productList;
