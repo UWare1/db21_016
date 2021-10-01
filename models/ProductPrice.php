@@ -37,7 +37,7 @@
     {
         $productList= [];
         require("connection_connect.php");
-        $sql = "SELECT PDid,PDname,pp.minQty,pp.Qty,pp.price,pp.screenPC FROM Product 
+        $sql = "SELECT p.PDid,p.PDname,pp.minQty,pp.Qty,pp.price,pp.screenPC FROM Product as p
         NATURAL JOIN product_price AS pp";
         $result = $conn->query($sql);
         while($my_row = $result->fetch_assoc()){
