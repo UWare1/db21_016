@@ -34,8 +34,8 @@ else{
             </td></tr>
         <br>
         <br>[<a href="?controller=detail&action=index"> Detail </a>]<br>
-        NEW Quotation Detail [<a href="?controller=detail&action=new"> NEW </a>]
-        
+        NEW Quotation Detail [<a href="?controller=detail&action=newQuotation"> NEW </a>]
+
         <form method="get" action="">
             <input type="text" name="key">
             <input type="hidden" name="controller" value="detail">
