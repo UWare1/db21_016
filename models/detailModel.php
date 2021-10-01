@@ -37,5 +37,27 @@ class Details{
         require("connection_close.php");
         return $detailList;
     }
+
+    public static function search($key){
+        $detailList = [] ;
+        require_once("connection_connect.php");
+        $sql = "SELECT q.Qid,p.PDid,p.PDname,p.PDdes,q.PDcolor,q.QDqty,q.numColor FROM quotation_detail AS q NATURAL JOIN Product AS p
+        where (Qid like '%key%')";
+        $result = $conn->query($sql);
+
+        while($my_row = $result->fetch_assoc())
+        {
+            $QID = $my_row[Qid];
+            $Pd_id = $my_row[PDid];
+            $Pd_name=$my_row[PDname];
+            $Pd_d = $my_row[PDdes];
+            $Pd_c = $my_row[PDcolor];
+            $qty = $my_row[QDqty];
+            $numc= $my_row[numColor];
+            $detailList[] = new Details($QID,$Pd_id,$Pd_name,$Pd_d,$Pd_c,$qty,$numc);
+        }
+        require("connection_close.php");
+    return $detailList;
+    }
 }
 ?>
