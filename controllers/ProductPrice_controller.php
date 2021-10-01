@@ -2,7 +2,7 @@
 class ProductController {
     public function index() {
         $productList = ProductPrice::getAll();
-        require_once('views/productprice/productPrice_crud.php');
+        require_once('views/productprice/indexProductPrice.php');
     }
 
     public function newproductPrice()
@@ -26,7 +26,7 @@ class ProductController {
     public function search() {
         $key=$_GET['key'];
         $productList=ProductPrice::search($key);
-        require_once('views/productprice/newproductPrice.php');
+        require_once('views/productprice/indexProductPrice.php');
     }
 
     public function updateForm() {
