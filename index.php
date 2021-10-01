@@ -23,14 +23,14 @@ else{
                 <input type="hidden" name="controller" value="ProductPrice"/>
                 <button type="submit" name="action" value="search">
                 Search</button>
-            </form>
+        </form>
             
             <tr>
             <td>
-                <a href="?controller=ProductPrice&action=updateForm&$PDid=$ProductPrice->PDid"> update </a>
+                <a href="?controller=ProductPrice&action=updateForm&PDid=$indexProductPrice->PDid"> update </a>
             </td>
             <td>
-                <a href="?controller=ProductPrice&action=deleteConfirm&$PDid=$ProductPrice->PDid"> delete </a>
+                <a href="?controller=ProductPrice&action=deleteConfirm&PDid=$indexProductPrice->PDid"> delete </a>
             </td></tr>
         <br>
         <br>[<a href="?controller=detail&action=index"> Detail </a>]<br>
