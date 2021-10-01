@@ -26,9 +26,9 @@ else{
             </form>
             
             <tr>
-            /*<td>
+            <td>
                 <a href="?controller=ProductPrice&action=updateForm&PDid=$ProductPrice->PDid"> update </a>
-            </td>*/
+            </td>
             <td>
                 <a href="?controller=ProductPrice&action=deleteConfirm&PDid=$ProductPrice->PDid"> delete </a>
             </td></tr>
