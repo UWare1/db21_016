@@ -13,6 +13,7 @@ function call($controller,$action){
                             $controller = new ProductController();
                             break;
         case"detail": require_once("models/detailModel.php");
+                        require_once("models/quotationlModel.php");
                         $controller = new detailController();
         break;
     }
