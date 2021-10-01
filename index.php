@@ -26,6 +26,7 @@ else{
             <td>
                 <a href="?controller=ProductPrice&action=deleteConfirm&PDid=$ProductPrice->PDid"> delete </a>
             </td></tr>
+        <br>
         <br>[<a href="?controller=detail&action=index"> Detail </a>]<br>
         <form method="get" action="">
             <input type="text" name="key">
