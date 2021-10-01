@@ -9,5 +9,9 @@ class detailController{
         $detailList = Details::search($key);
         require_once('views/details/detail_crud.php');
     }
+    public function newQuotation(){
+        $quotationList = Quotation::getAll();
+        require_once('views/details/detail_new.php');
+    }
 }
 ?>
