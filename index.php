@@ -32,6 +32,13 @@ else{
                 <a href="?controller=ProductPrice&action=deleteConfirm&PDid=$ProductPrice->PDid"> delete </a>
             </td></tr>
         <br>[<a href="?controller=detail&action=index"> Detail </a>]<br>
+        <form method="get" action="">
+            <input type="text" name="key">
+            <input type="hidden" name="controller" value="detail">
+            <button type="submit" name="action" value="search">
+                Search</button>
+        </form>
+
         <?php require_once("routes.php");?>
 </body>
 </html>
