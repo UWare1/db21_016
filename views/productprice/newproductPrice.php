@@ -1,5 +1,5 @@
 <form method="get" action="">
-<label>ชื่อสินค้า<select name="PDname">
+<label>รหัสสินค้า<select name="PDid">
     <option value=""> choose </option>
     <?php foreach($productList as $ProductPrice)
         {echo "<option value= $ProductPrice->PDid>$ProductPrice->PDname</option>";}?>
