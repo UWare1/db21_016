@@ -21,7 +21,9 @@ class Details{
     {
         $detailList = [];
         require("connection_connect.php");
-        $sql = "SELECT q.Qid,p.PDid,p.PDname,p.PDdes,q.PDcolor,q.QDqty,q.numColor FROM quotation_detail AS q NATURAL JOIN Product AS p";
+        $sql = "SELECT q.Qid,p.PDid,p.PDname,p.PDdes,q.PDcolor,q.QDqty,q.numColor FROM quotation_detail AS q
+        NATURAL JOIN Product AS p
+        ORDER BY q.Qid";
         $result = $conn -> query($sql);
         while($my_row = $result->fetch_assoc())
         {
@@ -40,9 +42,10 @@ class Details{
 
     public static function search($key){
         $detailList = [] ;
-        require_once("connection_connect.php");
+        require("connection_connect.php");
         $sql = "SELECT q.Qid,p.PDid,p.PDname,p.PDdes,q.PDcolor,q.QDqty,q.numColor FROM quotation_detail AS q NATURAL JOIN Product AS p
-        where (Qid like '%key%') ORDER BY q.Qid";
+        where (q.Qid like '%$key%' or p.PDid like '%$key%' or p.PDname like '%$key%' or p.PDdes like '%$key%' or q.PDcolor like '%$key%' 
+        or q.QDqty like '%$key%' or q.numColor like '%$key%') ";
         $result = $conn->query($sql);
 
         while($my_row = $result->fetch_assoc())
