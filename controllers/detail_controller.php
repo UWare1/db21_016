@@ -10,7 +10,8 @@ class detailController{
         require_once('views/details/detail_crud.php');
     }
     public function newQuotation(){
-        $quotationList = Quotation::getAll();
+        //$quotationList = Quotation::getAll();
+        //$productList = Products::getAll();
         require_once('views/details/detail_new.php');
     }
 }
