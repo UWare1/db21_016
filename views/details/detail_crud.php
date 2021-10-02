@@ -10,7 +10,7 @@ NEW Quotation Detail [<a href="?controller=detail&action=newQuotation"> NEW </a>
 
 <table border= 2>
     <tr><td> Qid </td> <td> Product ID </td> <td> Product Name </td>  <td> Product Detail </td> 
-    <td> Product Color </td> <td> QDqty </td> <td> numColor </td><td> update </td><td> Delete </td></tr>
+    <td> Product Color </td> <td> QDqty </td> <td> numColor </td><td> UPDATE </td><td> DELETE </td></tr>
     <?php 
         foreach($detailList as $detail){
         echo "<tr><td> $detail->QID</td>
