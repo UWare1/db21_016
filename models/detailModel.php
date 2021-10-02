@@ -62,5 +62,7 @@ class Details{
         require("connection_close.php");
     return $detailList;
     }
+
+    
 }
 ?>
