@@ -10,11 +10,16 @@ else{
 }
 
 ?>
-
+<style>
+    body {
+        background-image: linear-gradient(to bottom right, rgb(246, 162, 148) 20%, rgb(244, 124, 124));
+        text-align: center;
+    }
+</style>
 <html>
     <head></head>
     <body>
-        <?php echo "controller = ".$controller.",action = ".$action;?>
+        <?php echo "Controller = ".$controller."  |  Action = ".$action;?>
         <br>[<a href="?controller=pages&action=home"> Home </a>]<br>
         <br>[<a href="?controller=ProductPrice&action=index"> ProductPrice </a>]<br>
         new ProductPrice<a href="?controller=ProductPrice&action=newProductPrice"> click </a><br>
@@ -37,13 +42,6 @@ else{
         </form>
 
         <br>[<a href="?controller=Quotation&action=index"> Quotation </a>]<br>
-        new Quotation : <a href="?controller=Quotation&action=newQuotation">click </a><br>
-        <form method="get" action="">
-            <input type="text" name="key">
-            <input type="hidden" name="controller" value="Quotation">
-            <button type="submit" name="action" value="search">
-                Search</button>
-        </form>
         <?php require_once("routes.php");?>
 </body>
 </html>
