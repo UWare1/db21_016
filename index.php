@@ -16,12 +16,12 @@ else{
     <body>
         <?php echo "controller = ".$controller.",action = ".$action;?>
         <br>[<a href="?controller=pages&action=home"> Home </a>]<br>
-        <br>[<a href="?controller=ProductPrice&action=index"> ProductPrice </a>]<br>
+        <br>[<a href="?controller=ProductPrice&action=index"> ProductPrice </a>]
         
-        <br>
-        <br>[<a href="?controller=detail&action=index"> Detail </a>]<br>
+        
+        [<a href="?controller=detail&action=index"> Detail </a>]
 
-        <br>[<a href="?controller=Quotation&action=index"> Quotation </a>]<br>
+        [<a href="?controller=Quotation&action=index"> Quotation </a>]
         new Quotation : <a href="?controller=Quotation&action=newQuotation">click </a><br>
         <form method="get" action="">
             <input type="text" name="key">
