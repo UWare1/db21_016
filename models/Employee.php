@@ -15,15 +15,15 @@
         public static function getAll(){
             $employeelist = [];
             require("connection_connect.php");
-            $sql = "SELECT * FROM Employee";
+            $sql = "SELECT * FROM employee";
             $result = $conn -> query($sql);
             while($my_row = $result->fetch_assoc())
             {
-                $EMPid = $my_row[EMPid];
-                $EMPname = $my_row[EMPname];
-                $EMPuser=$my_row[EMPuser];
-                $EMPpass = $my_row[EMPpass];
-                $EMPpst = $my_row[EMPpst];
+                $EMPid = $my_row['EMPid'];
+                $EMPname = $my_row['EMPname'];
+                $EMPuser=$my_row['EMPuser'];
+                $EMPpass = $my_row['EMPpass'];
+                $EMPpst = $my_row['EMPpst'];
                 $employeelist[] = new Employee($EMPid, $EMPname, $EMPuser, $EMPpass, $EMPpst);
             }
             require("connection_close.php");
