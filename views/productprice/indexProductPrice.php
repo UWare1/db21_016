@@ -14,7 +14,7 @@
     <td>$ProductPrice->Qty</td>
     <td>$ProductPrice->price</td>
     <td>$ProductPrice->screenPC</td>
-    <td>update</td>
+    <td><a href=?controller=ProductPrice&action=updateForm&PDid=$indexProductPrice->PDid> update </a></td>
     <td>delete</td> </tr>";
 }
 
