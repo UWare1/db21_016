@@ -33,5 +33,15 @@ class detailController{
         $productList = Products::getAll();
         require_once('views/details/detail_update.php');
     }
+    public function uppdate(){
+        $q = $_GET['Qid'];
+        $pid = $_GET['PDid'];
+        $color = $_GET['PDcolor'];
+        $qy = $_GET['QDqty'];
+        $nc = $_GET['numColor'];
+
+        Details::update($q,$pid,$color,$qy,$nc);
+        detailController::index();
+    }
 }
 ?>
