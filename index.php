@@ -72,18 +72,6 @@ else{
         color: palevioletred;
         transition: all 0.2s ease 0s;
     }
-    li a.contact {
-        background-color: darkviolet;
-        padding: 9px 20px;
-        border-radius: 50px;
-        transition: all 0.3s ease 0s;
-        border-bottom: none;
-    }
-    li a.contact:hover {
-        background-color: deeppink;
-        color: white;
-        border-bottom: none;
-    }
 
 </style>
 <html>
