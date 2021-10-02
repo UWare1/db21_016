@@ -12,7 +12,13 @@ Hi
     </label>
     <br>
     <label> Product Color <input type="text" name="PDcolor"/></label>
+    <br>
     <label> qty <input type="text" name="QDqty"/></label>
+    <br>
     <label> num Color <input type="text" name="numColor"/></label>
+    <br>
+    <input type="hidden" name="controller" value="detail"/>
+    <button type="submit" name="action" value="index"> BACK </button>
+    <button type="submit" name="action" value="addDetail"> SAVE </button>
 
 </form>
