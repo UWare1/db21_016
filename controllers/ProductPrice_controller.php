@@ -49,6 +49,7 @@ class ProductController {
     public function deleteComfirm() {
         $PDid=$_GET['PDid'];
         $productPrice=ProductPrice::get($PDid);
+        $productList=Products::getAll();
         require_once('views/productprice/deleteConfirm.php');
     }
 
