@@ -8,6 +8,9 @@
         <td> Employee Name </td>
         <td> Credit </td> 
         <td> Deposit </td>
+        <td> Production </td>
+        <td> DateProduction </td>
+        <td> Shipping </td>
         <td> Update </td>
         <td> Delete </td> </tr>
     <?php 
@@ -21,6 +24,9 @@
                     <td>$Quotationas->EMPname</td>
                     <td>$Quotationas->Credit</td>
                     <td>$Quotationas->Deposit</td>
+                    <td>$Quotationas->Production</td>
+                    <td>$Quotationas->DateProduction</td>
+                    <td>$Quotationas->Shipping</td>
                     <td> <a href=?controller=Quotation&action=updateForm&QID=$Quotationas->Qid>
                          Update </a></td>
                     <td> <a href=?controller=Quotation&action=DeleteConfirm&QID=$Quotationas->Qid>

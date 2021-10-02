@@ -21,7 +21,8 @@ else{
         <form method="get" action="">
                 <input type="text" name="key">
                 <input type="hidden" name="controller" value="ProductPrice"/>
-                <button type="submit" name="action" value="search">Search</button>
+                <button type="submit" name="action" value="search">
+                Search</button>
         </form>
         
         <br>
@@ -36,6 +37,13 @@ else{
         </form>
 
         <br>[<a href="?controller=Quotation&action=index"> Quotation </a>]<br>
+        new Quotation : <a href="?controller=Quotation&action=newQuotation">click </a><br>
+        <form method="get" action="">
+            <input type="text" name="key">
+            <input type="hidden" name="controller" value="Quotation">
+            <button type="submit" name="action" value="search">
+                Search</button>
+        </form>
         <?php require_once("routes.php");?>
 </body>
 </html>
