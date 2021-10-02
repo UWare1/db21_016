@@ -29,5 +29,6 @@ class Products{
         require("connection_close.php");
         return $productList;
     }
+    
 }
 ?>
