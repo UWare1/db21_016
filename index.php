@@ -12,8 +12,31 @@ else{
 ?>
 <style>
     body {
-        background-image: linear-gradient(to bottom right, rgb(246, 162, 148) 20%, rgb(244, 124, 124));
+        background-image: linear-gradient(to top right, rgb(48, 61, 232), rgb(207, 37, 204));
         text-align: center;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    a:link {
+        color: black;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    a:visited {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    a:hover {
+        color: plum;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+    a:active {
+        color: darksalmon;
+        background-color: transparent;
+        text-decoration: underline;
     }
 </style>
 <html>
