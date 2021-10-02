@@ -25,5 +25,13 @@ class detailController{
         detailController::index();
 
     }
+
+    public function updateForm(){
+        $q = $_GET['Qid'];
+        $detail = Details::get($q);
+        $quotationList = Quotations::getAll();
+        $productList = Products::getAll();
+        require_once('views/details/detail_update.php');
+    }
 }
 ?>
