@@ -12,10 +12,15 @@ else{
 ?>
 <style>
     body {
+        margin: 0;
+        padding: 0;
         background-image: linear-gradient(to top right, rgb(48, 61, 232), rgb(207, 37, 204));
         text-align: center;
         color: white;
         font-family: Arial, Helvetica, sans-serif;
+    }
+    header {
+        background-color: rgb(34, 34, 54);
     }
 
     a:link {
@@ -39,20 +44,63 @@ else{
         text-decoration: underline;
     }
 
+    .main-nav {
+        height: 80px;
+    }
+    .navlinks {
+        list-style: none;
+        text-align: center;
+        line-height: 80px;
+        margin: 0;
+        padding: 0;
+    }
+    .navlinks li {
+        display: inline-block;
+        margin: 0px 10px;
+    }
+    .navlinks li a {
+        color: white;
+        text-decoration: none;
+        font-size: 17px;
+        text-transform: uppercase;
+    }
+    .navlinks li a:hover {
+        color: salmon;
+        transition: all 0.3s ease 0s;
+    }
+    .navlinks li a:active {
+        color: palevioletred;
+        transition: all 0.2s ease 0s;
+    }
+    li a.contact {
+        background-color: darkviolet;
+        padding: 9px 20px;
+        border-radius: 50px;
+        transition: all 0.3s ease 0s;
+        border-bottom: none;
+    }
+    li a.contact:hover {
+        background-color: deeppink;
+        color: white;
+        border-bottom: none;
+    }
+
 </style>
 <html>
     <head></head>
     <body>
         <header>
-        <?php echo "Controller = ".$controller."  |  Action = ".$action;?>
-        <br>[<a href="?controller=pages&action=home"> Home </a>]<br>
-        <br>[<a href="?controller=ProductPrice&action=index"> ProductPrice </a>]<br>
-        
-        <br>
-        <br>[<a href="?controller=detail&action=index"> Detail </a>]<br>
-
-        <br>[<a href="?controller=Quotation&action=index"> Quotation </a>]<br>
-        <?php require_once("routes.php");?>
+            <nav class="main-nav">
+                <ul class="navlinks">
+                    <li><a href="?controller=pages&action=home"> Home </a><li>
+                    <li><a href="?controller=ProductPrice&action=index"> ProductPrice </a><li>
+                    <li><a href="?controller=detail&action=index"> Detail </a><li>
+                    <li><a href="?controller=Quotation&action=index"> Quotation </a><li>
+                    
+                </ul>
+                <?php #echo "Controller = ".$controller."  |  Action = ".$action;?>
+            </nav>
         </header>
+        <br><?php require_once("routes.php");?></br>
 </body>
 </html>
