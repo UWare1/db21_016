@@ -40,7 +40,7 @@ class Details{
         require("connection_connect.php");
         $sql = "SELECT q.Qid,p.PDid,p.PDname,p.PDdes,q.PDcolor,q.QDqty,q.numColor FROM quotation_detail AS q
         NATURAL JOIN Product AS p
-        ORDER BY q.Qid";
+        ORDER BY q.Qid,p.PDid";
         $result = $conn -> query($sql);
         while($my_row = $result->fetch_assoc())
         {
@@ -62,7 +62,7 @@ class Details{
         require("connection_connect.php");
         $sql = "SELECT q.Qid,p.PDid,p.PDname,p.PDdes,q.PDcolor,q.QDqty,q.numColor FROM quotation_detail AS q NATURAL JOIN Product AS p
         where (q.Qid like '%$key%' or p.PDid like '%$key%' or p.PDname like '%$key%' or p.PDdes like '%$key%' or q.PDcolor like '%$key%' 
-        or q.QDqty like '%$key%' or q.numColor like '%$key%') ";
+        or q.QDqty like '%$key%' or q.numColor like '%$key%') ORDER BY p.PDid ";
         $result = $conn->query($sql);
 
         while($my_row = $result->fetch_assoc())
@@ -86,6 +86,15 @@ class Details{
         $result = $conn->query($sql);
         require("connection_close.php");
         return "add success $result rows";
+    }
+
+    public static function update($q,$pid,$color,$qy,$nc){
+        require("connection_connect.php");
+        $sql = "UPDATE `quotation_detail` SET `PDcolor`= '$color',`QDqty`= $qy,`numColor`= $nc WHERE `Qid`=$q AND `PDid`='$pid'";
+        $result=$conn->query($sql);
+        require("connection_close.php");
+        return "update success $result row";
+
     }
 }
 ?>
