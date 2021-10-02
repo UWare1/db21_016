@@ -7,7 +7,7 @@
 <td>screenPC</td>
 <td>update</td>
 <td>delete</td> </tr>
-<?php foreach($productList as $ProductPrice) {
+<?php foreach($ProductList as $ProductPrice) {
     echo "<tr><td>$ProductPrice->PDid</td>
     <td>$ProductPrice->PDname</td>
     <td>$ProductPrice->minQty</td>
