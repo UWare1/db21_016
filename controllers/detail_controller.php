@@ -21,7 +21,8 @@ class detailController{
         $qy = $_GET['QDqty'];
         $nc = $_GET['numColor'];
 
-        Details::
+        Details::add($q,$pid,$color,$qy,$nc);
+        
     }
 }
 ?>

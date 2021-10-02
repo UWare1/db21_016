@@ -65,7 +65,10 @@ class Details{
 
     public static function add($q,$pid,$color,$qy,$nc){
         require("connection_connect.php");
-        $sql = "insert into quotation_detail"
+        $sql = "insert into quotation_detail(Qid,PDid,PDcolor,QDqty,numColor) values= ('$q','$pid','$color','$qy','$nc')";
+        $result = $conn->query($sql);
+        require("connection_close.php");
+        return "add success $result rows";
     }
 }
 ?>
