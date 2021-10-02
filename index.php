@@ -24,7 +24,7 @@ else{
         text-decoration: none;
     }
     a:visited {
-        color: white;
+        color: gray;
         background-color: transparent;
         text-decoration: none;
     }
@@ -38,10 +38,12 @@ else{
         background-color: transparent;
         text-decoration: underline;
     }
+
 </style>
 <html>
     <head></head>
     <body>
+        <header>
         <?php echo "Controller = ".$controller."  |  Action = ".$action;?>
         <br>[<a href="?controller=pages&action=home"> Home </a>]<br>
         <br>[<a href="?controller=ProductPrice&action=index"> ProductPrice </a>]<br>
@@ -51,5 +53,6 @@ else{
 
         <br>[<a href="?controller=Quotation&action=index"> Quotation </a>]<br>
         <?php require_once("routes.php");?>
+        </header>
 </body>
 </html>
