@@ -13,7 +13,13 @@ UPDATE
     </label>
     <br>
     <label> Product ID <select name="PDid">
-        <?php foreach($productList as $pro) {echo "<option value=$pro->pdid> $pro->pdid </option>";}?>
+        <?php foreach($productList as $pro) {
+            echo "<option value=$pro->pdid";
+            if($pro->pdid==$detaill->Pd_id)
+            {
+                echo "selected='selected'";
+            }
+            echo"> $pro->pdid </option>";}?>
         </select>
     </label>
     <br>
@@ -25,6 +31,6 @@ UPDATE
     <br>
     <input type="hidden" name="controller" value="detail"/>
     <button type="submit" name="action" value="index"> BACK </button>
-    <button type="submit" name="action" value="addDetail"> SAVE </button>
+    <button type="submit" name="action" value="update"> SAVE </button>
 
 </form>
