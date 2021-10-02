@@ -87,5 +87,14 @@ class Details{
         require("connection_close.php");
         return "add success $result rows";
     }
+
+    public static function update($q,$pid,$color,$qy,$nc){
+        require("connection_connect.php");
+        $sql = "UPDATE `quotation_detail` SET `PDcolor`= '$color',`QDqty`= $qy,`numColor`= $nc WHERE `Qid`=$q AND `PDid`='$pid'";
+        $result=$conn->query($sql);
+        require("connection_close.php");
+        return "update success $result row";
+
+    }
 }
 ?>
