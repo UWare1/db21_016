@@ -1,6 +1,6 @@
 <form method="get" action="">
     
-    <label>Quotation ID  :  <input type="text" name="QID"/> </label><br>
+    <label>Quotation ID  :  <input type="number" name="QID"/> </label><br>
     <label>Quotation Date  :  <input type="date" name="QDate"/> </label><br>
     <label>Customer ID  :  <select name="CUSid">
         <?php 
@@ -18,10 +18,10 @@
             }
         ?>
     </select></label><br>
-    <label>Credit  :  <input type="text" name="Credit"/> </label><br>
-    <label>Deposit  :  <input type="text" name="Deposit"/> </label><br>
+    <label>Credit  :  <input type="number" name="Credit"/> </label><br>
+    <label>Deposit  :  <input type="number" name="Deposit"/> </label><br>
     <label>Production  :  <input type="text" name="Production"/> </label><br>
-    <label>DateProduction  :  <input type="text" name="DateProduction"/> </label><br>
+    <label>DateProduction  :  <input type="date" name="DateProduction"/> </label><br>
     <label>Shipping  :  <input type="text" name="Shipping"/> </label><br>
 
 
