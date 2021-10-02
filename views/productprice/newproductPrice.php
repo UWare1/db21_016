@@ -1,7 +1,7 @@
 <form method="get" action="">
 <label>สินค้า<select name="PDid">
     <option value=""> choose </option>
-    <?php foreach($productList as $ProductPrice)
+    <?php foreach($ProductList as $ProductPrice)
         {echo "<option value= $ProductPrice->PDid>$ProductPrice->PDname</option>";}?>
         </select></label><br>
 <label>จำนวนขั้นต่ำ<input type="text" name="minQty"/></label><br>
