@@ -44,6 +44,7 @@ else{
         </form>
 
         <br>[<a href="?controller=Quotation&action=index"> Quotation </a>]<br>
+        new Quotation : <a href="?controller=Quotation&action=newQuotation">click </a><br>
         <?php require_once("routes.php");?>
 </body>
 </html>
