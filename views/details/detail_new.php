@@ -11,6 +11,8 @@ Hi
         </select>
     </label>
     <br>
+    <label> Product Color <input type="text" name="PDcolor"/></label>
     <label> qty <input type="text" name="QDqty"/></label>
+    <label> num Color <input type="text" name="numColor"/></label>
 
 </form>
