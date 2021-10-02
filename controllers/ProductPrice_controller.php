@@ -1,13 +1,14 @@
 <?php 
 class ProductController {
     public function index() {
-        $productList = ProductPrice::getAll();
+        $ProductList = ProductPrice::getAll();
         require_once('views/productprice/indexProductPrice.php');
     }
 
     public function newproductPrice()
     {
-        $productList = ProductPrice::getAll();
+        $ProductList = ProductPrice::getAll();
+        $productList = Products::getAll();
         require_once('views/productprice/newproductPrice.php');
     }
 
@@ -25,14 +26,14 @@ class ProductController {
 
     public function search() {
         $key=$_GET['key'];
-        $productList=ProductPrice::search($key);
+        $ProductList=ProductPrice::search($key);
         require_once('views/productprice/indexProductPrice.php');
     }
 
     public function updateForm() {
         $PDid = $_GET['PDid'];
         $ProductPrice= ProductPrice::get($PDid);
-        $productList=ProductPrice::getAll();
+        $ProductList=ProductPrice::getAll();
         require_once('views/productprice/updateFormPP.php');
     }
 
