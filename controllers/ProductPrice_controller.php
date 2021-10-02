@@ -7,7 +7,7 @@ class ProductController {
 
     public function newProductPrice()
     {
-        $ProductList = ProductPrice::getAll();
+        //$ProductList = ProductPrice::getAll();
         $productList = Products::getAll();
         require_once('views/productprice/newproductPrice.php');
     }
@@ -32,7 +32,7 @@ class ProductController {
     public function updateForm() {
         $PDid = $_GET['PDid'];
         $ProductPrice= ProductPrice::get($PDid);
-        $ProductList=ProductPrice::getAll();
+        $productList=Products::getAll();
         require_once('views/productprice/updateFormPP.php');
     }
 
@@ -48,14 +48,14 @@ class ProductController {
 
     public function deleteComfirm() {
         $PDid=$_GET['PDid'];
-        $ProductPrice=ProductPrice::get($PDid);
+        $productPrice=ProductPrice::get($PDid);
         require_once('views/productprice/deleteConfirm.php');
     }
 
     public function delete() {
         $PDid=$_GET['PDid'];
         $minQty=$_GET['minQty'];
-        ProductPrice::delete($PDid,$minQty);
+        ProductPrice::delete($PDid, $minQty);
         ProductController::index();
 
     }
