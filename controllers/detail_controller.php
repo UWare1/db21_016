@@ -14,5 +14,14 @@ class detailController{
         $productList = Products::getAll();
         require_once('views/details/detail_new.php');
     }
+    public function addDetail(){
+        $q = $_GET['Q_ID'];
+        $pid = $_GET['pdid'];
+        $color = $_GET['PDcolor'];
+        $qy = $_GET['QDqty'];
+        $nc = $_GET['numColor'];
+
+        Details::
+    }
 }
 ?>
