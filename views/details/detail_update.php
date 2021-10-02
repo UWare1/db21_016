@@ -30,6 +30,7 @@ UPDATE
     <label> num Color <input type="text" name="numColor" value="<?php echo $detaill->numc;?>"/></label>
     <br>
     <input type="hidden" name="controller" value="detail"/>
+    <input type="hidden" name="id" value="<?php echo $order->id_order_cus; ?>"/>
     <button type="submit" name="action" value="index"> BACK </button>
     <button type="submit" name="action" value="update"> SAVE </button>
 
