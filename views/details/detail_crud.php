@@ -20,7 +20,7 @@ NEW Quotation Detail [<a href="?controller=detail&action=newQuotation"> NEW </a>
                 <td>$detail->Pd_c</td>
                 <td>$detail->qty</td>
                 <td>$detail->numc</td>
-                <td><a href = ?controller=detail&action=updateForm&Qid=$detatail->QID> UPDATE </td>
+                <td><a href = ?controller=detail&action=updateForm&Qid=$detail->QID> UPDATE </td>
                 <td>Delete</td>
                 </tr>";
     }
