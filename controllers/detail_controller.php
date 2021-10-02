@@ -22,7 +22,8 @@ class detailController{
         $nc = $_GET['numColor'];
 
         Details::add($q,$pid,$color,$qy,$nc);
-        
+        detailController::index();
+
     }
 }
 ?>
