@@ -22,7 +22,7 @@
 echo "</table>";
 
 ?>
-new ProductPrice<a href="?controller=ProductPrice&action=newProductPrice"> click </a><br>
+
         <form method="get" action="">
                 <input type="text" name="key">
                 <input type="hidden" name="controller" value="ProductPrice"/>
@@ -30,3 +30,4 @@ new ProductPrice<a href="?controller=ProductPrice&action=newProductPrice"> click
                 Search</button>
         </form>
 
+new ProductPrice<a href="?controller=ProductPrice&action=newProductPrice"> click </a><br>
