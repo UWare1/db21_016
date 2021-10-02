@@ -1,8 +1,8 @@
 <form method="get" action="">
 <label>Product<select name="PDid">
     <option value=""> choose </option>
-    <?php foreach($ProductList as $Pro)
-        {echo "<option value= $Pro->PDid>$Pro->PDname</option>";}?>
+    <?php foreach($productList as $Pro)
+        {echo "<option value= $Pro->pdid>$Pro->pdname</option>";}?>
         </select></label><br>
 <label>minQty<input type="text" name="minQty"/></label><br>
 <label>Qty<input type="text" name="Qty"/></label><br>
