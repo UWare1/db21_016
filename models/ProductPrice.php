@@ -89,7 +89,7 @@
 
     public static function update($PDid, $minQty, $Qty, $price, $screenPC) {
         require("connection_connect.php");
-        $sql = "UPDATE product_price SET minQty='$minQty', Qty='$Qty', price='$price', screenPC='$screenPC' WHERE PDid='$PDid'";
+        $sql = "UPDATE product_price SET minQty='$minQty', Qty='$Qty', price='$price', screenPC='$screenPC' WHERE PDid='$PDid' AND minQty='$minQty'";
         $result = $conn->query($sql);
         require("connection_close.php");
 
