@@ -17,6 +17,23 @@ class Details{
         $this->numc = $numc;
         $this->Pd_d = $Pd_d;
     }
+    public static function get($q){
+        require("connection_connect.php");
+        $sql = "SELECT q.Qid,p.PDid,p.PDname,p.PDdes,q.PDcolor,q.QDqty,q.numColor FROM quotation_detail AS q
+        NATURAL JOIN Product AS p WHERE Qid=$q AND PDid ='$Pd_id'";
+        $result = $conn->query($sql);
+        $my_row = $result->fetch_assoc();
+        $QID = $my_row[Qid];
+        $Pd_id = $my_row[PDid];
+        $Pd_name=$my_row[PDname];
+        $Pd_d = $my_row[PDdes];
+        $Pd_c = $my_row[PDcolor];
+        $qty = $my_row[QDqty];
+        $numc= $my_row[numColor];
+        require("connection_close.php");
+        return new Details($QID,$Pd_id,$Pd_name,$Pd_d,$Pd_c,$qty,$numc);
+
+    }
     public static function getAll()
     {
         $detailList = [];
