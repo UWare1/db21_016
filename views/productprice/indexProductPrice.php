@@ -15,7 +15,7 @@
     <td>$ProductPrice->price</td>
     <td>$ProductPrice->screenPC</td>
     <td><a href=?controller=ProductPrice&action=updateForm&PDid=$indexProductPrice->PDid> update </a></td>
-    <td><a href?controller=ProductPrice&action=deleteConfirm&PDid=$indexProductPrice->PDid> delete </a></td>
+    <td><a href=?controller=ProductPrice&action=deleteConfirm&PDid=$indexProductPrice->PDid> delete </a></td>
     </tr>";
 }
 
