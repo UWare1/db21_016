@@ -15,8 +15,8 @@ class detailController{
         require_once('views/details/detail_new.php');
     }
     public function addDetail(){
-        $q = $_GET['Q_ID'];
-        $pid = $_GET['pdid'];
+        $q = $_GET['Qid'];
+        $pid = $_GET['PDid'];
         $color = $_GET['PDcolor'];
         $qy = $_GET['QDqty'];
         $nc = $_GET['numColor'];

@@ -14,12 +14,11 @@ class ProductController {
 
     public function addProductPrice() {
         $PDid = $_GET['PDid'];
-        $PDname = $_GET['PDname'];
         $minQty = $_GET['minQty'];
         $Qty = $_GET['Qty'];
         $price = $_GET['price'];
         $screenPC = $_GET['screenPC'];
-        ProductPrice::Add($PDid,$PDname,$minQty,$Qty,$price,$screenPC);
+        ProductPrice::Add($PDid,$minQty,$Qty,$price,$screenPC);
 
         ProductController::index();
     }
