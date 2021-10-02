@@ -5,7 +5,7 @@ class ProductController {
         require_once('views/productprice/indexProductPrice.php');
     }
 
-    public function newproductPrice()
+    public function newProductPrice()
     {
         $ProductList = ProductPrice::getAll();
         $productList = Products::getAll();
