@@ -69,7 +69,7 @@
             $Qty = $my_row[Qty];
             $price = $my_row[price];
             $screenPC = $my_row[screenPC];
-            $productList[]= new ProductPrice($PDid,$PDname, $minQty, $Qty, $price, $screenPC);
+            $ProductList[]= new ProductPrice($PDid,$PDname, $minQty, $Qty, $price, $screenPC);
         }
         
         require("connection_close.php");
