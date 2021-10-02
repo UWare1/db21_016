@@ -77,10 +77,10 @@
         return $ProductList;
     }
 
-    public static function Add($PDid,$PDname, $minQty, $Qty, $price, $screenPC) {
+    public static function Add($PDid, $minQty, $Qty, $price, $screenPC) {
         require("connection_connect.php");
         $sql = "INSERT INTO product_price(PDid, minQty, Qty, price, screenPC) VALUES 
-        ('PDid', 'minQty', 'Qty', 'price', 'screenPC')";
+        ('$PDid', '$minQty', '$Qty', '$price', '$screenPC')";
         $result = $conn->query($sql);
         require("connection_close.php");
 
