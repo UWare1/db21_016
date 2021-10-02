@@ -43,6 +43,7 @@ else{
                 Search</button>
         </form>
 
+        <br>[<a href="?controller=Quotation&action=index"> Quotation </a>]<br>
         <?php require_once("routes.php");?>
 </body>
 </html>
