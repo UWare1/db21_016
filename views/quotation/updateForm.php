@@ -1,6 +1,6 @@
 <form method="get" action="">
     
-    <label>Quotation ID  :  <input type="text" name="QID"
+    <label>Quotation ID  :  <input type="number" name="QID"
         value="<?php echo $Quotation->QID;?>"/> </label><br>
     <label>Quotation Date  :  <input type="date" name="QDate"
         value="<?php echo $Quotation->QDate;?>"/> </label><br>
@@ -31,13 +31,13 @@
     </select></label><br>
     <!--<label>Employee Name  :  <input type="text" name="EMPname"
         value="<?php echo $Quotation->EMPname;?>"/> </label><br>-->
-    <label>Credit  :  <input type="text" name="Credit"
+    <label>Credit  :  <input type="number" name="Credit"
         value="<?php echo $Quotation->Credit;?>"/> </label><br>
-    <label>Deposit  :  <input type="text" name="Deposit"
+    <label>Deposit  :  <input type="number" name="Deposit"
         value="<?php echo $Quotation->Deposit;?>"/> </label><br>
     <label>Production  :  <input type="text" name="Production"
         value="<?php echo $Quotation->Production;?>"/> </label><br>
-    <label>DateProduction  :  <input type="text" name="DateProduction"
+    <label>DateProduction  :  <input type="date" name="DateProduction"
         value="<?php echo $Quotation->DateProduction;?>"/> </label><br>
     <label>Shipping  :  <input type="text" name="Shipping"
         value="<?php echo $Quotation->Shipping;?>"/> </label><br>

@@ -10,11 +10,41 @@ else{
 }
 
 ?>
+<style>
+    body {
+        background-image: linear-gradient(to top right, rgb(48, 61, 232), rgb(207, 37, 204));
+        text-align: center;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
 
+    a:link {
+        color: black;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    a:visited {
+        color: gray;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    a:hover {
+        color: plum;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+    a:active {
+        color: darksalmon;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
+</style>
 <html>
     <head></head>
     <body>
-        <?php echo "controller = ".$controller.",action = ".$action;?>
+        <header>
+        <?php echo "Controller = ".$controller."  |  Action = ".$action;?>
         <br>[<a href="?controller=pages&action=home"> Home </a>]<br>
         <br>[<a href="?controller=ProductPrice&action=index"> ProductPrice </a>]<br>
         
@@ -22,13 +52,7 @@ else{
         <br>[<a href="?controller=detail&action=index"> Detail </a>]<br>
 
         <br>[<a href="?controller=Quotation&action=index"> Quotation </a>]<br>
-        new Quotation : <a href="?controller=Quotation&action=newQuotation">click </a><br>
-        <form method="get" action="">
-            <input type="text" name="key">
-            <input type="hidden" name="controller" value="Quotation">
-            <button type="submit" name="action" value="search">
-                Search</button>
-        </form>
         <?php require_once("routes.php");?>
+        </header>
 </body>
 </html>
