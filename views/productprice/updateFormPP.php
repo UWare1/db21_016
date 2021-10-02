@@ -1,7 +1,7 @@
 <form method="get" action="">
     <label>รหัสสินค้า<select name="PDid">
         <option value=""> choose </option>
-        <?php foreach($productList as $ProPrice)
+        <?php foreach($ProductList as $ProPrice)
             {echo "<option value= $ProPrice->PDid>";
                 if($ProPrice->PDid!=$ProductPrice->PDid) {echo "selected='selected'";}
                 echo ">$ProPrice->name</option>";
