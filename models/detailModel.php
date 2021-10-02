@@ -63,6 +63,9 @@ class Details{
     return $detailList;
     }
 
-    
+    public static function add($q,$pid,$color,$qy,$nc){
+        require("connection_connect.php");
+        $sql = "insert into quotation_detail"
+    }
 }
 ?>
