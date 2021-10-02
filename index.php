@@ -27,14 +27,6 @@ else{
         
         <br>
         <br>[<a href="?controller=detail&action=index"> Detail </a>]<br>
-        NEW Quotation Detail [<a href="?controller=detail&action=newQuotation"> NEW </a>]
-
-        <form method="get" action="">
-            <input type="text" name="key">
-            <input type="hidden" name="controller" value="detail">
-            <button type="submit" name="action" value="search">
-                Search</button>
-        </form>
 
         <br>[<a href="?controller=Quotation&action=index"> Quotation </a>]<br>
         new Quotation : <a href="?controller=Quotation&action=newQuotation">click </a><br>
