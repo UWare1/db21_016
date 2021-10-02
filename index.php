@@ -24,12 +24,7 @@ else{
                 <button type="submit" name="action" value="search">
                 Search</button>
         </form>
-            
-            <tr>
-            
-            <td>
-                <a href="?controller=ProductPrice&action=deleteConfirm&PDid=$indexProductPrice->PDid"> delete </a>
-            </td></tr>
+        
         <br>
         <br>[<a href="?controller=detail&action=index"> Detail </a>]<br>
         NEW Quotation Detail [<a href="?controller=detail&action=newQuotation"> NEW </a>]
