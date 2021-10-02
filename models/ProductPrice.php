@@ -35,7 +35,7 @@
 
     public static function getAll()
     {
-        $productList= [];
+        $ProductList= [];
         require("connection_connect.php");
         $sql = "SELECT p.PDid,p.PDname,pp.minQty,pp.Qty,pp.price,pp.screenPC FROM Product as p
         NATURAL JOIN product_price AS pp";
@@ -47,16 +47,16 @@
             $Qty = $my_row[Qty];
             $price = $my_row[price];
             $screenPC = $my_row[screenPC];
-            $productList[]= new ProductPrice($PDid,$PDname, $minQty, $Qty, $price, $screenPC);
+            $ProductList[]= new ProductPrice($PDid,$PDname, $minQty, $Qty, $price, $screenPC);
         }
         
         require("connection_close.php");
 
-        return $productList;
+        return $ProductList;
     }
 
     public static function search($key) {
-        $productList= [];
+        $ProductList= [];
         require("connection_connect.php");
         $sql = "SELECT p.PDid,p.PDname,pp.minQty,pp.Qty,pp.price,pp.screenPC FROM Product AS p
         NATURAL JOIN product_price AS pp WHERE (p.PDid LIKE '%$key%' OR p.PDname LIKE '%key%' OR pp.minQty LIKE '%$key%' OR 
@@ -74,7 +74,7 @@
         
         require("connection_close.php");
 
-        return $productList;
+        return $ProductList;
     }
 
     public static function Add($PDid,$PDname, $minQty, $Qty, $price, $screenPC) {
