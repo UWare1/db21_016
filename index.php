@@ -24,12 +24,12 @@ else{
     }
 
     a:link {
-        color: black;
+        color: grey;
         background-color: transparent;
         text-decoration: none;
     }
     a:visited {
-        color: gray;
+        color: dodgerblue;
         background-color: transparent;
         text-decoration: none;
     }
@@ -84,8 +84,8 @@ else{
                     <li><a href="?controller=ProductPrice&action=index"> ProductPrice </a><li>
                     <li><a href="?controller=detail&action=index"> Detail </a><li>
                     <li><a href="?controller=Quotation&action=index"> Quotation </a><li>
+                    <?php echo "Controller = ".$controller."  |  Action = ".$action;?>
                 </ul>
-                <?php echo "Controller = ".$controller."  |  Action = ".$action;?>
             </nav>
         </header>
         <br><?php require_once("routes.php");?></br>
