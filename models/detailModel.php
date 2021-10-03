@@ -17,10 +17,10 @@ class Details{
         $this->numc = $numc;
         $this->Pd_d = $Pd_d;
     }
-    public static function get($q){
+    public static function get($q,$pid,$color,$qy,$nc){
         require("connection_connect.php");
-        $sql = "SELECT q.Qid,p.PDid,p.PDname,p.PDdes,q.PDcolor,q.QDqty,q.numColor FROM quotation_detail AS q
-        NATURAL JOIN Product AS p WHERE Qid=$q AND PDid ='$Pd_id'";
+        $sql = "SELECT Qid,PDid,PDcolor,QDqty,numColor FROM quotation_detail 
+        WHERE Qid=$q AND PDid ='$pid' AND PDcolor = '$color' ";
         $result = $conn->query($sql);
         $my_row = $result->fetch_assoc();
         $QID = $my_row[Qid];
@@ -85,7 +85,7 @@ class Details{
         $sql = "INSERT INTO `quotation_detail`(`Qid`, `PDid`, `PDcolor`, `QDqty`, `numColor`) VALUES ($q,'$pid','$color',$qy,$nc)";
         $result = $conn->query($sql);
         require("connection_close.php");
-        return "add success $result rows";
+        return " add success $result rows";
     }
 
     public static function update($q,$pid,$color,$qy,$nc){
@@ -93,8 +93,15 @@ class Details{
         $sql = "UPDATE `quotation_detail` SET `PDcolor`= '$color',`QDqty`= $qy,`numColor`= $nc WHERE `Qid`=$q AND `PDid`='$pid'";
         $result=$conn->query($sql);
         require("connection_close.php");
-        return "update success $result row";
+        return " update success $result row";
 
+    }
+    public static function delete($q,$pid,$color){
+        require("connection_connect.php");
+        $sql = "DELETE FROM `quotation_detail` WHERE `Qid`=$q AND `PDid`='$pid' AND PDcolor = '$color'";
+        $result = $conn->query($sql);
+        require("connection_close.php");
+        return "delete success $result row";
     }
 }
 ?>
