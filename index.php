@@ -24,7 +24,7 @@ else{
     }
 
     a:link {
-        color: grey;
+        color: black;
         background-color: transparent;
         text-decoration: none;
     }
