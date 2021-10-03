@@ -72,6 +72,7 @@ else{
         color: palevioletred;
         transition: all 0.2s ease 0s;
     }
+    
 
 </style>
 <html>
@@ -88,6 +89,6 @@ else{
                 <?php echo "Status = ".$controller."  |  ".$action;?>
             </nav>
         </header>
-        <br><?php require_once("routes.php");?></br>
+        <br><br><?php require_once("routes.php");?></br>
 </body>
 </html>

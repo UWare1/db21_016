@@ -15,16 +15,7 @@
         padding: 4.5px 6.5px;
         border: none;
     }
-    .left{
-        width:110px;
-        float:left;
-        text-align:left;
-    }
-    .right{
-        width:110px;
-        float:right;
-        text-align:right;
-    }
+
     .button {
         padding: 5.75px 8px;
         text-align: center;
@@ -54,33 +45,31 @@
         value="<?php echo $Quotation->QID;?>"/> </label><br>
     <label>Quotation Date  :  <input type="date" name="QDate"
         value="<?php echo $Quotation->QDate;?>"/> </label><br>
+        
     <label>Customer ID  :  <select class="dropbtn" name="CUSid">
         <?php 
             foreach($customerlist as $Customer){
                 echo "<option value= $Customer->CUSid";
                 if($Customer->CUSid==$Quotation->CUSid){
-                    echo "selected='selected'";
+                    echo " selected='selected'";
                 }
                 echo ">$Customer->CUSid</option>";
             }
         ?>
     </select></label><br>
 
-    <!--<label>Customer Name  :  <input type="text" name="CUSname"
-        value="<?php echo $Quotation->CUSname;?>"/> </label><br>-->
     <label>Employee ID  :  <select class="dropbtn" name="EMPid">
         <?php 
             foreach($employeelist as $Employee){
                 echo "<option value= $Employee->EMPid";
                 if($Employee->EMPid==$Quotation->EMPid){
-                    echo "selected='selected'";
+                    echo " selected='selected'";
                 }
                 echo ">$Employee->EMPid</option>";
             }
         ?>
     </select></label><br>
-    <!--<label>Employee Name  :  <input type="text" name="EMPname"
-        value="<?php echo $Quotation->EMPname;?>"/> </label><br>-->
+
     <label>Credit  :  <input type="number" name="Credit"
         value="<?php echo $Quotation->Credit;?>"/> </label><br>
     <label>Deposit  :  <input type="number" name="Deposit"
@@ -91,7 +80,8 @@
         value="<?php echo $Quotation->DateProduction;?>"/> </label><br>
     <label>Shipping  :  <input type="text" name="Shipping"
         value="<?php echo $Quotation->Shipping;?>"/> </label><br>
-<input type="hidden" name="controller" value="Quotation"/>
-<button class="button button1" type="submit" name="action" value="index"> Back </button>
-<button class="button button1" type="submit" name="action" value="update"> Update </button>
+
+    <input type="hidden" name="controller" value="Quotation"/>
+    <button class="button button1" type="submit" name="action" value="index"> Back </button>
+    <button class="button button1" type="submit" name="action" value="update"> Update </button>
 </form>

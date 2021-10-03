@@ -14,15 +14,13 @@ class QuotationController{
         $QID = $_GET['QID'];
         $QDate = $_GET['QDate'];
         $CUSid = $_GET['CUSid'];
-        #$CUSname = $_GET['CUSname'];
-        $EMPid= $_GET['EMPid'];
-        #$EMPname= $_GET['EMPname'];
-        $Credit= $_GET['Credit'];
-        $Deposit= $_GET['Deposit'];
-        $Production= $_GET['Production'];
-        $DateProduction= $_GET['DateProduction'];
-        $Shipping= $_GET['Shipping'];
-        Quotation::addQ($QID,$QDate,$CUSid,$EMPid, $Credit, $Deposit, $Production, $DateProduction, $Shipping);
+        $EMPid = $_GET['EMPid'];
+        $Credit = $_GET['Credit'];
+        $Deposit = $_GET['Deposit'];
+        $Production = $_GET['Production'];
+        $DateProduction = $_GET['DateProduction'];
+        $Shipping = $_GET['Shipping'];
+        Quotation::addQ($QID, $QDate, $CUSid, $EMPid, $Credit, $Deposit, $Production, $DateProduction, $Shipping);
         QuotationController::index();
     }
     public function search(){
@@ -41,15 +39,13 @@ class QuotationController{
         $QID = $_GET['QID'];
         $QDate = $_GET['QDate'];
         $CUSid = $_GET['CUSid'];
-        #$CUSname = $_GET['CUSname'];
-        $EMPid= $_GET['EMPid'];
-        #$EMPname= $_GET['EMPname'];
-        $Credit= $_GET['Credit'];
-        $Deposit= $_GET['Deposit'];
-        $Production= $_GET['Production'];
-        $DateProduction= $_GET['DateProduction'];
-        $Shipping= $_GET['Shipping'];
-        Quotation::update($QID,$QDate,$CUSid,$EMPid, $Credit, $Deposit, $Production, $DateProduction, $Shipping);
+        $EMPid = $_GET['EMPid'];
+        $Credit = $_GET['Credit'];
+        $Deposit = $_GET['Deposit'];
+        $Production = $_GET['Production'];
+        $DateProduction = $_GET['DateProduction'];
+        $Shipping = $_GET['Shipping'];
+        Quotation::update($QID, $QDate, $CUSid, $EMPid, $Credit, $Deposit, $Production, $DateProduction, $Shipping);
         QuotationController::index();
     }
     public function DeleteConfirm(){

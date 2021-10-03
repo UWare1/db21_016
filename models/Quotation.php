@@ -114,12 +114,12 @@
     public static function update($QID, $QDate, $CUSid, $EMPid, $Credit, $Deposit, $Production, $DateProduction, $Shipping){
         require("connection_connect.php");
         $sql = "UPDATE quotation
-        SET QDate = $QDate, CUSid = $CUSid, EMPid = $EMPid, credit = $Credit, deposit = $Deposit, 
-        production = $Production, date_production = $DateProduction, shipping = $Shipping
+        SET QDate = '$QDate', CUSid = '$CUSid', EMPid = '$EMPid', credit = '$Credit', deposit = '$Deposit', 
+        production = '$Production', date_production = '$DateProduction', shipping = '$Shipping'
         WHERE Qid = $QID";
         $result = $conn -> query($sql);
         require("connection_close.php");
-        return "UPDATE SUCCESS!";
+        return "Update SUCCESS!";
     }
     public static function delete($QID){
         require("connection_connect.php");
@@ -127,7 +127,7 @@
         WHERE Qid = $QID";
         $result = $conn -> query($sql);
         require("connection_close.php");
-        return "DELETE SUCCESS!";
+        return "Delete SUCCESS!";
     }
     }
 ?>
