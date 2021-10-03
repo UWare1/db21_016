@@ -45,6 +45,23 @@ class detailController{
         Details::update($q,$pid,$color,$qy,$nc);
         detailController::index();
     }
+    public function delete_Confirm(){
+        $q = $_GET['Qid'];
+        $pid = $_GET['PDid'];
+        $color = $_GET['PDcolor'];
+        $qy = $_GET['QDqty'];
+        $nc = $_GET['numColor'];
+        $d = Details::get($q,$pid,$color,$qy,$nc);
+        require_once('views/details/detail_confirm.php');
+        
+    }
+    public function delete(){
+        $q = $_GET['x'];
+        $pid = $_GET['y'];
+        $color = $_GET['z'];
+        Details::delete($q,$pid,$color);
+        detailController::index();
+    }
    
 }
 ?>
