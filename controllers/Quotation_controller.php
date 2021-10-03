@@ -11,17 +11,17 @@ class QuotationController{
         require_once('views/quotation/newQuotation.php');
     }
     public function addQuotation(){
-        $QID = $_GET['Qid'];
+        $QID = $_GET['QID'];
         $QDate = $_GET['QDate'];
         $CUSid = $_GET['CUSid'];
         #$CUSname = $_GET['CUSname'];
         $EMPid= $_GET['EMPid'];
         #$EMPname= $_GET['EMPname'];
-        $Credit= $_GET['credit'];
-        $Deposit= $_GET['deposit'];
-        $Production= $_GET['production'];
-        $DateProduction= $_GET['date_production'];
-        $Shipping= $_GET['shipping'];
+        $Credit= $_GET['Credit'];
+        $Deposit= $_GET['Deposit'];
+        $Production= $_GET['Production'];
+        $DateProduction= $_GET['DateProduction'];
+        $Shipping= $_GET['Shipping'];
         Quotation::addQ($QID,$QDate,$CUSid,$EMPid, $Credit, $Deposit, $Production, $DateProduction, $Shipping);
         QuotationController::index();
     }
@@ -31,34 +31,34 @@ class QuotationController{
         require_once('views/quotation/indexQuotation.php');
     }
     public function updateForm(){
-        $QID = $_GET['Qid'];
+        $QID = $_GET['QID'];
         $Quotation = Quotation::get($QID);
         $employeelist = Employee::getAll();
         $customerlist = Customer::getAll();
         require_once('views/quotation/updateForm.php');
     }
     public function update(){
-        $QID = $_GET['Qid'];
+        $QID = $_GET['QID'];
         $QDate = $_GET['QDate'];
         $CUSid = $_GET['CUSid'];
         #$CUSname = $_GET['CUSname'];
         $EMPid= $_GET['EMPid'];
         #$EMPname= $_GET['EMPname'];
-        $Credit= $_GET['credit'];
-        $Deposit= $_GET['deposit'];
-        $Production= $_GET['production'];
-        $DateProduction= $_GET['date_production'];
-        $Shipping= $_GET['shipping'];
+        $Credit= $_GET['Credit'];
+        $Deposit= $_GET['Deposit'];
+        $Production= $_GET['Production'];
+        $DateProduction= $_GET['DateProduction'];
+        $Shipping= $_GET['Shipping'];
         Quotation::update($QID,$QDate,$CUSid,$EMPid, $Credit, $Deposit, $Production, $DateProduction, $Shipping);
         QuotationController::index();
     }
     public function DeleteConfirm(){
-        $QID = $_GET['Qid'];
+        $QID = $_GET['QID'];
         $Quotation = Quotation::get($QID);
         require_once('views/quotation/DeleteConfirm.php');
     }
     public function delete(){
-        $QID = $_GET['Qid'];
+        $QID = $_GET['QID'];
         Quotation::delete($QID);
         QuotationController::index();
     }

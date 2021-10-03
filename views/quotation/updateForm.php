@@ -1,3 +1,16 @@
+<style>
+    input[type=text], [type=number] {
+        width: 10%;
+        padding: 5px 8px;
+        margin: 5px 0px;
+        text-align: center;
+        box-sizing: border-box;
+        border: none;
+        background-color: rgb(57, 57, 78);
+        color: white;
+    }
+</style>
+
 <form method="get" action="">
     
     <label>Quotation ID  :  <input type="number" name="QID"

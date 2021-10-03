@@ -30,6 +30,7 @@
             require("connection_connect.php");
             $sql = "SELECT Qid, QDate, CUSid, CUSname, EMPid, EMPname, credit, deposit, production, date_production, shipping FROM quotation
             NATURAL JOIN customer NATURAL JOIN employee
+            WHERE Qid = '$QID'
             ORDER BY Qid";
             $result = $conn->query($sql);
             $my_row = $result->fetch_assoc();
@@ -77,7 +78,7 @@
     }
     public static function addQ($QID, $QDate, $CUSid, $EMPid, $Credit, $Deposit, $Production, $DateProduction, $Shipping){
         require("connection_connect.php");
-        $sql = "INSERT INTO quotation(Qid, QDate, CUSid, EMPid, credit, deposit)
+        $sql = "INSERT INTO quotation(Qid, QDate, CUSid, EMPid, credit, deposit, production, date_production, shipping)
         VALUES('$QID', '$QDate', '$CUSid', '$EMPid', '$Credit', '$Deposit', '$Production', '$DateProduction', '$Shipping')";
         $result = $conn -> query($sql);
         require("connection_close.php");
