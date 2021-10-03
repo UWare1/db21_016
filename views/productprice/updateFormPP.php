@@ -6,7 +6,7 @@
                 echo "<option value= $ProPrice->pdid";
                 if($ProPrice->pdid==$ProductPrice->PDid) 
                 {
-                    echo "selected='selected'";
+                    echo " selected='selected'";
                 }
                 echo "> $ProPrice->pdname</option>";
             }?>
