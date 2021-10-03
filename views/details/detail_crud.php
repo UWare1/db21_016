@@ -21,7 +21,7 @@ NEW Quotation Detail [<a href="?controller=detail&action=newQuotation"> NEW </a>
                 <td>$detail->qty</td>
                 <td>$detail->numc</td>
                 <td><a href = ?controller=detail&action=updateForm&Qid=$detail->QID> UPDATE </td>
-                <td> DELETE </td>
+                <td><a href = ?controller=detail&action=delete_Confirm&Qid=$detail->QID&PDid=$detail->Pd_id&PDcolor=$detail->Pd_c> DELETE </td>
                 </tr>";
     }
     echo "</table>";
