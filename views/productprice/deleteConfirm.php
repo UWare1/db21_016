@@ -1,6 +1,6 @@
-<?php echo "<br>Are you sure to delete this product<br>
-            <br>PDid: $ProductPrice->PDid, minQty: $ProductPrice->minQty,
-            Qty: $ProductPrice->Qty, Price: $ProductPrice->price, screenPC: $ProductPrice->screenPC<br>";?>
+<?php echo "<br>Are you sure to delete this product?<br>
+            <br>PDid: $ProductPrice->PDid<br>minQty: $ProductPrice->minQty<br>
+            Qty: $ProductPrice->Qty<br>Price: $ProductPrice->price<br>screenPC: $ProductPrice->screenPC<br>";?>
 <form method="get" action="">
     <input type="hidden" name="controller" value="ProductPrice"/>
     <input type="hidden" name="PDid" value="<?php echo $ProductPrice->PDid;?>"/>
