@@ -50,9 +50,9 @@
 
 <form method="get" action="">
     
-    <label>Quotation ID  :  <input type="number" name="QID"/> </label><br>
-    <label>Quotation Date  :  <input type="date" name="QDate"/> </label><br>
-    
+    <label>Quotation ID  :  <input type="number" name="QID" required/> </label><br>
+    <label>Quotation Date  :  <input type="date" name="QDate" required/> </label><br>
+
     <label>Customer ID  :  <select class="dropbtn" name="CUSid">
         <?php 
             foreach($customerlist as $Customer){
@@ -70,11 +70,11 @@
         ?>
     </select></label><br>
 
-    <label>Credit  :  <input type="number" name="Credit"/> </label><br>
-    <label>Deposit  :  <input type="number" name="Deposit"/> </label><br>
-    <label>Production  :  <input type="text" name="Production"/> </label><br>
-    <label>DateProduction  :  <input type="date" name="DateProduction"/> </label><br>
-    <label>Shipping  :  <input type="text" name="Shipping"/> </label><br>
+    <label>Credit  :  <input type="number" name="Credit" required/> [IF none (0)]</label><br>
+    <label>Deposit  :  <input type="number" name="Deposit" required/> [IF none (0)]</label><br>
+    <label>Production  :  <input type="text" name="Production" required/> [IF none (-)]</label><br>
+    <label>DateProduction  :  <input type="text" name="DateProduction" required/> [yyyy-mm-dd or (-)]</label><br>
+    <label>Shipping  :  <input type="text" name="Shipping" required/> [IF none (-)]</label><br>
 
     <input type="hidden" name="controller" value="Quotation"/>
     <button class="button button1" type="submit" name="action" value="index"> Back </button>

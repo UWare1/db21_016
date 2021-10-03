@@ -79,7 +79,7 @@
     public static function addQ($QID, $QDate, $CUSid, $EMPid, $Credit, $Deposit, $Production, $DateProduction, $Shipping){
         require("connection_connect.php");
         $sql = "INSERT INTO quotation(Qid, QDate, CUSid, EMPid, credit, deposit, production, date_production, shipping)
-        VALUES($QID, '$QDate', '$CUSid', '$EMPid', $Credit, $Deposit, '$Production', '$DateProduction', '$Shipping')";
+        VALUES('$QID', '$QDate', '$CUSid', '$EMPid', '$Credit', '$Deposit', '$Production', '$DateProduction', '$Shipping')";
         $result = $conn -> query($sql);
         require("connection_close.php");
         return "ADD SUCCESS!";
@@ -116,7 +116,7 @@
         $sql = "UPDATE quotation
         SET QDate = '$QDate', CUSid = '$CUSid', EMPid = '$EMPid', credit = '$Credit', deposit = '$Deposit', 
         production = '$Production', date_production = '$DateProduction', shipping = '$Shipping'
-        WHERE Qid = $QID";
+        WHERE Qid = '$QID'";
         $result = $conn -> query($sql);
         require("connection_close.php");
         return "Update SUCCESS!";
@@ -124,7 +124,7 @@
     public static function delete($QID){
         require("connection_connect.php");
         $sql = "DELETE From quotation
-        WHERE Qid = $QID";
+        WHERE Qid = '$QID'";
         $result = $conn -> query($sql);
         require("connection_close.php");
         return "Delete SUCCESS!";
