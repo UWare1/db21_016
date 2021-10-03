@@ -1,4 +1,5 @@
-<br><br>new ProductPrice<a href="?controller=ProductPrice&action=newProductPrice"> click </a><br>
+Welcome to นางสาวมนัญชยา ไวทยกุล รหัสนิสิต 6220503325
+<br><br>new ProductPrice<a href="?controller=ProductPrice&action=newProductPrice"> click!! </a><br>
         <form method="get" action="">
                 <input type="text" name="key">
                 <input type="hidden" name="controller" value="ProductPrice"/>
@@ -21,7 +22,7 @@
     <td>$ProductPrice->Qty</td>
     <td>$ProductPrice->price</td>
     <td>$ProductPrice->screenPC</td>
-    <td><a href=?controller=ProductPrice&action=updateForm&PDid=$ProductPrice->PDid> update </a></td>
+    <td><a href=?controller=ProductPrice&action=updateForm&PDid=$ProductPrice->PDid&minQty=$ProductPrice->minQty> update </a></td>
     <td><a href=?controller=ProductPrice&action=deleteConfirm&PDid=$ProductPrice->PDid&minQty=$ProductPrice->minQty> delete </a></td>
     </tr>";
 }
