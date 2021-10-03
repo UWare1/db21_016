@@ -23,8 +23,7 @@
     <label>Production  :  <input type="text" name="Production"/> </label><br>
     <label>DateProduction  :  <input type="date" name="DateProduction"/> </label><br>
     <label>Shipping  :  <input type="text" name="Shipping"/> </label><br>
-
-
+    
 <input type="hidden" name="controller" value="Quotation"/>
 <button type="submit" name="action" value="index"> Back </button>
 <button type="submit" name="action" value="addQuotation"> ADD </button>

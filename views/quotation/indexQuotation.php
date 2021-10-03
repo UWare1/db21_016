@@ -44,6 +44,38 @@
     body {
         font-family: Arial, Helvetica, sans-serif;
     }
+    
+    input[type=text] {
+        width: 10%;
+        padding: 5px 8px;
+        margin: 5px 0px;
+        text-align: center;
+        box-sizing: border-box;
+        border: none;
+        background-color: rgb(57, 57, 78);
+        color: white;
+    }
+    .button {
+        padding: 5.75px 8px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 12px;
+        margin: 0px 0px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+    }
+
+    .button1 {
+        background-color: rgb(57, 57, 78); 
+        color: white; 
+        border: 2px solid rgb(57, 57, 78);
+    }
+
+    .button1:hover {
+        background-color: white;
+        color: rgb(57, 57, 78);
+        border: 2px solid white;
+    }
 
 </style>
 <html>
@@ -52,7 +84,7 @@
         <form method="get" action="">
             <input type="text" name="key">
             <input type="hidden" name="controller" value="Quotation">
-            <button type="submit" name="action" value="search">
+            <button class="button button1" type="submit" name="action" value="search">
                 Search</button>
         </form>
     </body>
@@ -89,9 +121,9 @@
                     <td>$Quotationas->Production</td>
                     <td>$Quotationas->DateProduction</td>
                     <td>$Quotationas->Shipping</td>
-                    <td> <a href=?controller=Quotation&action=updateForm&QID=$Quotationas->Qid>
+                    <td> <a href=?controller=Quotation&action=updateForm&QID=$Quotationas->QID>
                          Update </a></td>
-                    <td> <a href=?controller=Quotation&action=DeleteConfirm&QID=$Quotationas->Qid>
+                    <td> <a href=?controller=Quotation&action=DeleteConfirm&QID=$Quotationas->QID>
                          Delete </a></td>
                 </tr>";
         }

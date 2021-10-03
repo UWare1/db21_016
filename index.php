@@ -84,7 +84,6 @@ else{
                     <li><a href="?controller=ProductPrice&action=index"> ProductPrice </a><li>
                     <li><a href="?controller=detail&action=index"> Detail </a><li>
                     <li><a href="?controller=Quotation&action=index"> Quotation </a><li>
-                    
                 </ul>
                 <?php #echo "Controller = ".$controller."  |  Action = ".$action;?>
             </nav>
