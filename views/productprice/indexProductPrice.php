@@ -10,11 +10,11 @@
     }
 
     .content-table thead tr {
-        background-color: rgb(57, 57, 78);
-        border-bottom: 1px rgb(57, 57, 78);
-        border-left: 1px rgb(57, 57, 78);
-        border-right: 1px rgb(57, 57, 78);
-        color: #ffffff;
+        background-color: rgb(255, 244, 128);
+        border-bottom: 1px rgb(255, 255, 255);
+        border-left: 1px rgb(255, 255, 255);
+        border-right: 1px rgb(255, 255, 255);
+        color: #39394e;
         text-align: center;
         font-weight: bold;
         font-family: Arial, Helvetica, sans-serif;
