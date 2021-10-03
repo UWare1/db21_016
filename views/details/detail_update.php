@@ -6,7 +6,7 @@ UPDATE
             echo "<option value=$quo->Q_ID";
             if($quo->Q_ID==$d->QID)
             {
-                echo " selected='selected'";
+                echo" selected='selected'";
             }
             echo "> $quo->Q_ID </option>";}?>
         </select>
@@ -17,7 +17,7 @@ UPDATE
             echo "<option value=$pro->pdid";
             if($pro->pdid==$d->Pd_id)
             {
-                echo " selected='selected'";
+                echo" selected='selected'";
             }
             echo "> $pro->pdid </option>";}?>
         </select>
