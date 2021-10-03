@@ -10,7 +10,7 @@ else{
 }
 
 ?>
-<style>
+<!-- <style>
     body {
         margin: 0;
         padding: 0;
@@ -73,7 +73,7 @@ else{
         transition: all 0.2s ease 0s;
     }
 
-</style>
+</style> -->
 <html>
     <head></head>
     <body>
@@ -86,7 +86,7 @@ else{
                     <li><a href="?controller=Quotation&action=index"> Quotation </a><li>
                     
                 </ul>
-                <?php #echo "Controller = ".$controller."  |  Action = ".$action;?>
+                <?php echo "Controller = ".$controller."  |  Action = ".$action;?>
             </nav>
         </header>
         <br><?php require_once("routes.php");?></br>
