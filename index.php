@@ -10,7 +10,7 @@ else{
 }
 
 ?>
-<!-- <style>
+<style>
     body {
         margin: 0;
         padding: 0;
@@ -73,7 +73,7 @@ else{
         transition: all 0.2s ease 0s;
     }
 
-</style> -->
+</style>
 <html>
     <head></head>
     <body>
