@@ -79,7 +79,7 @@
     public static function addQ($QID, $QDate, $CUSid, $EMPid, $Credit, $Deposit, $Production, $DateProduction, $Shipping){
         require("connection_connect.php");
         $sql = "INSERT INTO quotation(Qid, QDate, CUSid, EMPid, credit, deposit, production, date_production, shipping)
-        VALUES('$QID', '$QDate', '$CUSid', '$EMPid', '$Credit', '$Deposit', '$Production', '$DateProduction', '$Shipping')";
+        VALUES($QID, '$QDate', '$CUSid', '$EMPid', $Credit, $Deposit, '$Production', '$DateProduction', '$Shipping')";
         $result = $conn -> query($sql);
         require("connection_close.php");
         return "ADD SUCCESS!";
