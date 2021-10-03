@@ -27,7 +27,11 @@ class detailController{
     }
     public function updateForm(){
         $q = $_GET['Qid'];
-        $detail = Details::get($q);
+        $pid = $_GET['PDid'];
+        $color = $_GET['PDcolor'];
+        $qy = $_GET['QDqty'];
+        $nc = $_GET['numColor'];
+        $d = Details::get($q,$pid,$color,$qy,$nc);
         $quotationList = Quotations::getAll();
         $productList = Products::getAll();
         require_once('views/details/detail_update.php');
