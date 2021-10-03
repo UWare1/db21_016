@@ -121,10 +121,10 @@
         require("connection_close.php");
         return "Update SUCCESS!";
     }
-    public static function delete($QID){
+    public static function delete($QID, $QDate, $CUSid){
         require("connection_connect.php");
         $sql = "DELETE From quotation
-        WHERE Qid = '$QID'";
+        WHERE Qid = '$QID' AND QDate = '$QDate' AND CUSid = '$CUSid'";
         $result = $conn -> query($sql);
         require("connection_close.php");
         return "Delete SUCCESS!";

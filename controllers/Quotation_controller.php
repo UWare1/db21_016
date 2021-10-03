@@ -55,7 +55,9 @@ class QuotationController{
     }
     public function delete(){
         $QID = $_GET['QID'];
-        Quotation::delete($QID);
+        $QDate = $_GET['QDate'];
+        $CUSid = $_GET['CUSid'];
+        Quotation::delete($QID, $QDate, $CUSid);
         QuotationController::index();
     }
 }
