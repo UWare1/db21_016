@@ -16,10 +16,10 @@
         $this->screenPC = $screenPC;
     }
 
-    public static function get($PDid) {
+    public static function get($PDid,$minQty) {
         require("connection_connect.php");
-        $sql = "SELECT PDid,PDname,pp.minQty,pp.Qty,pp.price,pp.screenPC FROM Product 
-        NATURAL JOIN product_price AS pp";
+        $sql = "SELECT * FROM `product_price`
+        WHERE PDid = '$PDid' AND minQty = $minQty";
         $result = $conn->query($sql);
         $my_row = $result->fetch_assoc();
         $PDid = $my_row[PDid];
@@ -98,7 +98,7 @@
 
     public static function delete($PDid, $minQty) {
         require("connection_connect.php");
-        $sql = "DELETE FROM product_price WHERE PDid='$PDid' AND minQty='$minQty'";
+        $sql = "DELETE FROM product_price WHERE PDid = '$PDid' AND minQty = $minQty";
         $result = $conn->query($sql);
         require("connection_close.php");
 
