@@ -80,6 +80,8 @@
 </style>
 <html>
     <body>
+        Hello Agian!<br>
+        I'm Yutthana Piyawongwatthana 6220500709<br>
         New Quotation : <a href="?controller=Quotation&action=newQuotation">Click </a><br>
         <form method="get" action="">
             <input type="text" name="key">
