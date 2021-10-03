@@ -96,13 +96,5 @@ class Details{
         return "update success $result row";
 
     }
-    public static function delete($q,$pid,$color,$qy,$nc){
-        require("connection_connect.php");
-        $sql = "DELETE FROM `quotation_detail` WHERE Qid = $q AND PDid = '$pid' AND PDcolor = '$color'";
-        $result = $conn->query($sql);
-        require("connection_close.php");
-        return "delete success $result row";
-
-    }
 }
 ?>
