@@ -52,7 +52,7 @@
         text-align: center;
         box-sizing: border-box;
         border: none;
-        background-color: rgb(57, 57, 78);
+        background-color: rgb(255, 244, 128);
         color: white;
     }
     .button {
