@@ -10,11 +10,11 @@
     }
 
     .content-table thead tr {
-        background-color: rgb(57, 57, 78);
+        background-color: rgb(218, 255, 154);
         border-bottom: 1px rgb(57, 57, 78);
         border-left: 1px rgb(57, 57, 78);
         border-right: 1px rgb(57, 57, 78);
-        color: #ffffff;
+        color: #000000;
         text-align: center;
         font-weight: bold;
         font-family: Arial, Helvetica, sans-serif;
@@ -78,6 +78,7 @@
     }
 
 </style>
+<>
 ณัฐนรี คำเด่นเหล็ก 6220502086 <br>
 NEW Quotation Detail [<a href="?controller=detail&action=newQuotation"> NEW </a>]
 
