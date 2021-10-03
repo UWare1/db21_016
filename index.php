@@ -84,8 +84,8 @@ else{
                     <li><a href="?controller=ProductPrice&action=index"> ProductPrice </a><li>
                     <li><a href="?controller=detail&action=index"> Detail </a><li>
                     <li><a href="?controller=Quotation&action=index"> Quotation </a><li>
-                    <?php echo "Controller = ".$controller."  |  Action = ".$action;?>
-                </ul>
+                </ul><br>
+                <?php echo "Status = ".$controller."  |  ".$action;?>
             </nav>
         </header>
         <br><?php require_once("routes.php");?></br>
